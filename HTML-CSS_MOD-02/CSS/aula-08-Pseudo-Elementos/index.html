@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    a{
+        color: rgb(12, 131, 250);
+        text-decoration: none;
+        
+    }
+    a:visited {/*Ë uma pseudo classe que serve para indicar se um site já foi visitado. Neste caso estamos definindo o visited para que fique azul escuro  quando ele já tiver sido visitado*/
+        color:darkblue;
+
+    }
+    a:hover {
+         font-weight: bold;
+         
+    }
+    a:active{/*Esta pseudo-class serve para que quando clicarmos em cima do link e segurar, o link sofra uma alteração. Neste caso programei para que ele ficasse rosa quando isso acontecesse.*/
+        color: rgb(255, 0, 162);
+    }
+    /*PSEUDO ELEMENTOS*/
+    /*As pseudo classes são definidas por ':' , já os Pseudo Elementos são deefinidos por '::' e podem ser usados e div, class, id.*/
+
+    a::before{/*Este pseudo elemento serve para adicionar um elemento antes, ou seja, before quer dizer depois. Este elemento que vai ser adicionado, precisa ser definido logo abaixo.*/
+        content: '⇒ ';
+        color: red;
+
+    }
+    a::after {/*Este pseudo elemento serve para adicionar um elemeto depois, ou seja. after quer dizer depois. Este elemento que vai ser adicionado, precisa ainda ser definido logo abaixo.*/
+            content:' [Link] ⇐';/*Aqui estamos usando o content para adicionar a palavra link após cada link.*/
+        
+        text-decoration: none;
+        font-weight: normal;
+        color:red;
+    }
+</style>
+<body>
+    <h1>Personalizando Links</h1>
+    <ul>
+        <li><a href="https://gustavoguanabara.github.io" target="_blank">Repositório GitHub</a></li>
+        <li><a href="https://youtube.com/cursoemvideo/" target="_blank">Canal do Youtube</a></li>
+        <li><a href="https://www.cursoemvideo.com" target="_blank">Site do CursoemVideo</a></li> 
+        
+    </ul>
+    
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo classes</title>
+    <style>/*As pseudo-classes se referem ao estado de uma class esão representadas por ":" */
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        
+    }
+        div{
+            display:inline-block;
+            background-color: lightgrey;
+            border: 1px solid black;
+            text-align: center;
+            height: 400px;
+            width: 400px;
+            margin: 10px;
+            font-size: 25px;
+            
+
+        }
+        div:hover{/*Hover quer dizer que quando eu passar o mause por cima desta div ela vai sofre alguma alteração*/
+         background-color: blueviolet;
+        }
+        #d1:hover{
+            background-color: blue;
+        }
+
+    </style>
+    
+</head>
+<body>
+
+    <div id="d1">01</div>
+    <div id="d2">02</div>
+    <div id="d3">03</div>
+    
+</body>
+</html>

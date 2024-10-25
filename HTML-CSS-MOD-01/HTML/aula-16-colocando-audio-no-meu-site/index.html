@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens que se adaptam as telas</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
+
+    <picture><!--Essa tag é semelhante a tag img, porém ela permite criarmos vários sources, ou seja, várias fontes e isso permite fazermos adaptações para cada tipo de tala e seus respectivos tamanhos.-->
+        <!--A tag source possui vários formatos, neste exemplo vamos trabalhar com o media type -->
+        <!--MAX-WIDTH-->
+        <!--<source media="(max-width: 350px)" srcset="./img/foto-p.png" type="image/png">
+        <source media="(max-width: 750px)" srcset="./img/foto-m.png" type="image/png">
+        <img src="./img/foto-g.png" alt="Imagem flexível">
+
+        Por padrão o media dentro da tag source vem como min-width:, para fazermos o mesmo exemplo acima usando o min temos que modificar a estrutura, ou seja, a imagem base que no exemplo acima é a imagem grande, neste caso aqui passa a ser a imagem pequena e também enecessário inverter as ordens também.-->
+        
+    </picture>
+    <picture>
+        <!-- Imagem para telas grandes (mínimo 751px de largura) -->
+         <!--MIN-WIDTH-->
+        <source media="(min-width: 751px)" srcset="./img/foto-g.png" type="image/png">
+        
+        <!-- Imagem para telas médias (entre 351px e 750px) -->
+        <source media="(min-width: 351px)" srcset="./img/foto-m.png" type="image/png">
+        
+        <!-- Imagem padrão para telas pequenas (até 350px) -->
+        <img src="./img/foto-p.png" alt="Imagem flexível">
+    </picture>
+
+
+    <h1>Reproduzindo áudio</h1><!--Para reproduzir um áudio é muito simples, basta inserir a tag áudio e dentro dela você vai vincular o arquivo de áudio com o parâmetro src="". O pr'ximo passo é a reprodução, nós podemos usar uma reprodução automática que vai iniciar assim que você abri a página e par isso usamos o parâmetro autoplay, porém não são todos os navegadores que suportam. A forma mais indicada é inserir controles de mídia ao invés de automatizar seu início, para isso vamos usar o parâmetro controls, este é usado tanto para aúdio quanto para mídia e nos dará aceso ao controle de mídia como, play e pause.-->
+    <p>Vamos aprender a reproduzir áudios em HTML5.</p>
+    <audio controls src="midia/Construyendo en el Espacio - Luna Cantina.mp3"></audio>
+     
+    <!--Ainda falando sobre os navegadores que podem não suportar alguns formatos de ádio que podem variar de MP3, OGG ou WAV, então temos uma outra forma de implantar mídia no nosso site. Veja no exemplo abaixo que vamos usara tag audio novamente, porém ela ja vem por padrão com o src integrado, mas nós vamos retirar ele e deixa a tag adio pura. Após feito isso camos criar alguns souces, ou seja vamos criar tags souce para inserir individualmente os formatos que queremos e é claro o src do arquivo de mídia. -->
+    <audio controls>
+            <source src="midia/Construyendo en el Espacio - Luna Cantina.mp3" type="audio/mpeg">
+            <source src="midia/Construyendo en el Espacio - Luna Cantina.mp3" type="audio/ogg">
+            <source src="midia/Construyendo en el Espacio - Luna Cantina.mp3" type="audio/wav">
+            <p>Seu navegador é uma sucáta e não consegue reproduzir nada que pereste.</p>
+            <a href="midia/Construyendo en el Espacio - Luna Cantina.mp3">Click aqui para reproduzir o seu áudio.</a>
+    </audio>
+    
+</body>
+</html>

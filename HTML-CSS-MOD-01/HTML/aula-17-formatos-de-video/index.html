@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatos de vídeo</title>
+    <style>
+        video {
+            color: #fff;
+            height: 100vh;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <h1>Vamos conhecer alguns formatos de vídeo!</h1>
+    <!--No caso dos vídeos, normalmente temos os seguintes formatos para navegadores: MP4, M4v, OGV. Normalmente quando queremos exibir um arquivo de vídeo, disponilizamos todos os formatos para que se o navegador não for compatível com ele será com o outro, mas normalmente ele funciona sem especificar todos os formatos-->
+    <!--MÉTODO SIMPLIFICADO(PODE NÃO FUNCIONAR EM TODOS OS NAVEGADORES)-->
+    <!--<video controls src="midia/sistema-solar.mp4"></video>
+    <video controls src="midia/tecnologia-energia-heolica.mp4"></video>-->
+     
+    <!--MÉTODO COM TODOS OS FORMATOS(MAIS TRABALHOSO PORÉM É MAIS GARANTIDO DE FUNCIONAR)-->
+    <video controls>
+        <source src="midia/sistema-solar.mp4" type="video/mp4">
+        <source src="midia/sistema-solar.mkv" type="video/x-matroska">
+        <source src="midia/sistema-solar.ogv" type="video/ogg">
+    </video>
+    <video controls >
+        <source src="midia/tecnologia-energia-heolica.mp4" type="video/mp4">
+        <source src="midia/tecnologia-energia-heolica.mkv" type="video/x-matroska">
+        <source src="midia/tecnologia-energia-heolica.ogv" type="video/ogg">
+    </video>
+    
+    
+</body>
+</html>

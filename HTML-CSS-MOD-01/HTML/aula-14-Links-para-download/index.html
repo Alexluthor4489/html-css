@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com links</title>
+</head>
+<body>
+    <h1>Usando links externos</h1>
+
+    <p>Você pode acessar o meu <a href="https://gustavoguanabara.github.io/" target="_blank" rel="external">repositório público no Github</a></p><!--Quando acessar-mos um link extermo da nossa página seremos redirecionados e depois não vamos voltar para pagina anterior, ou seja, não poderemos acessar nossa página anterior novamente então usamos a propriedade target com o parâmetro -blanc, assim o nosso navegador vai abri uma nova aba para o link que queremos alcançar, já o rel com a propriedade external quer dizer que se trata de um link externo-->
+    <p>Você também pode acessar o meu <a href="https://www.instagram.com/cursoemvideo/" target="-blanc" rel="external">canal gratuito no YouTube.</a></p>
+    <h2>Usando links internos</h2>
+    <p>Esta é a primeira página do site. Se você quiser, pode acessar também a minha <a href="index-02.html" rel="next">segunda página</a> </p><!--Diferente dos links externos que tem o atributo rel="External", os links internos não tem um rel="Internal", ao invés disso eles tem dois atributos rel. Um é o rel="next" que está indicando que aquele link leva para página seguinte em relação a página atual. E o outro é o rel="prev", que indica que aquele link leva para página anterior em relação a página atual-->
+    <p>Você também pode acessar nossa página de notícias</p>
+    <h1>Links para download</h1>
+    <ul>
+        <li><a href="./livro/meulivro.pdf" target="_blank">Baixar livro em PDF</a></li>
+        <li><a href="./livro/meulivro.zip" target="_blank">Baixar livro compactado em ZIP</a></li>
+    </ul>
+    
+    
+</body>
+</html>

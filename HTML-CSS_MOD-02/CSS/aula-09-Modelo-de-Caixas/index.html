@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de caixas</title>
+    <style>
+        h1{
+            background-color: darkcyan;
+            color: aliceblue;
+            padding:10px;
+            height: 300px;
+            width: 300px;
+            border: 2px solid rgb(3, 75, 81);
+            border-radius: 10px;
+            box-shadow: 10px 10px 5px #90aabb;
+            margin: auto;/*É usado para centralizar uma caixa horizontalmente apezar de não ser muito intuitivo, mas funciona*/
+            text-align: center;/*É usado para centralizar um texto horizontalmente.*/
+            align-content: center;/*É usado para centralizar um conteúdo como texto por exemplo, verticalmente.*/
+            
+            /*Aqui ficou bem exemplificado o uso do shothend em algumas propriedades como: PADDING, MARGIN, BORDER E OUTLINE*/
+
+            /*O USO DO SHOTHAND é para agilizar  escrita do nosso código porém deve seguir alguns padrões para funcionar por exemplo: primeiro a espessura da borda, modelo da borda, cor da borda.
+
+            No caso das proriedades de espaçamento como padding e margin,funciona como um relógio da seguinte maneira: primeiro o valor do topo depois o valor da direita, depois o valor de baixo e por ultimo o valor da esquerda. Exemplo: padding:5px 8px 10 px 12px;. Quando todas as medidas forem iguais, basta colocar uma única vez por exemplo: margin:10px;. Um ponto de observação seia quando se quer editar apenas dois lados, pois a intepretação do programa vai ser diferente, nõa vai funcionar com a precedência de uma relógio e sim de uma cruz por exemplo: a primeira medida é o topo a segunda fica sendo a de baixo e não a da esquerda quando se tem 4 medidas, exemplo: paddin:10px auto 20px auto;*/
+        }
+        p{
+            text-align: center;
+        }
+        h2{
+            background-color: darkcyan;
+            color: aliceblue;
+            padding:10px;
+            border: 2px solid rgb(3, 75, 81);
+            outline: 5px dashed rgb(157, 1, 255);
+            height: 300px;
+            width: 300px;
+            border-radius: 10px;
+            margin: auto;
+            text-align: center;
+            align-content: center;
+        }
+        a{
+            border: 3px solid rgb(0, 21, 255);
+            padding: 3px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de caixa box-level</h1>
+    <p>Parágrafos também são exemplos de box-level, mas os <a href="#">links são um exemplo de caixas inline-level</a>. Vamos ver como tudo isoo funciona. </p>
+    <h2>Exemplo de caixa box-level</h2>
+    <p>Parágrafos também são exemplos de box-level, mas os <a href="#">links são um exemplo de caixas inline-level</a>. Vamos ver como tudo isoo funciona. </p>
+</body>
+</html>

@@ -1,0 +1,15 @@
+body{
+    background-color:  chartreuse;
+}
+h1{
+    color: rgb(3, 75, 75);
+    background-color: aquamarine;
+}
+h2{
+   color: blue; 
+   background-color:aqua;
+}
+p{
+    color:  rgb(144, 6, 103);
+    background-color: aliceblue;
+}

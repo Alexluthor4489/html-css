@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(158, 156, 156);
+        }
+        main{
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 70%;
+            margin: auto;
+            min-width: 320px;/*A qui estamos definindo a largura minima para 320px pois os smarphones mais antigos normalmente tem esta largura*/
+            max-width: 800px ;
+        }
+        img{
+            width: 100%;
+        }
+      
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Testando responsividade</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus consequatur enim voluptates voluptatum fugiat, ut nihil sequi voluptatibus ab dolorem sint dolore magnam molestiae eius, eaque odio? Accusantium, quasi recusandae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, dignissimos, deleniti dolore incidunt, vel voluptatum odio alias placeat labore error ullam illo. Corrupti aliquid temporibus perspiciatis nam quaerat soluta libero! Lorem ipsum dolor sit amet consectetur adipisicing elit. Et ipsam quasi voluptas rem dolores, fuga nihil odio minus temporibus modi blanditiis laborum, voluptatem, voluptatibus nobis sint omnis! Iusto, dolores qui!</p>
+        <!--Aqui vamos deixar nossa imagem responsiva e dinâmica usando a tag picture seguida de source com sua propriedade media e srcset-->
+        <picture>
+            <source media="(max-width: 600px)" srcset="imagens/irina-blok-pq.jpg"><!--A propriedade media serve ara definirmos o tamanho mínimo ou  máximo, já o srcset serve para definir a imagem que será usada.-->
+            <img src="imagens/irina-blok.jpg" alt="Irina Block">
+            <!--Aqui basicamente estamos definindo que enquanto a tela tiver até 600px, a imagem que será usada sera a irina block pequena, quando passar de 600px vai ser usada a imagem irina block normal-->
+        </picture>
+    </main>
+    
+</body>
+</html>

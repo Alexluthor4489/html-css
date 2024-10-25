@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas OL e UL</title>
+    <style>
+        body{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com listas</h1>
+    <h2>Listas ordenadas</h2>
+        <ol type="1"><!--A tag OL tem uma propriedade type na qual vc pode definir se quiser, como esta lista vai ser ordenada, seja por número,letras ou até mesmo por algarismos romanos. Por padrão toda ol ja vem congigurada em ordem numérica.-->
+            <li>Acordar</li>
+            <li>Rezar</li>
+            <li>Escovar os dentes</li>
+            <li>Tomar café</li>
+            <li>Procastinar</li>
+            <li>Estudar</li>
+            <li>Namorar</li>
+            <li>Brincar com meu filhotinho</li>
+        </ol>
+    <h2>Listas não ordenadas</h2>
+        <ul type="square"><!--A taul representa uma lista não ordenada portanto não tem nenhuma ordem de precedencia,no entanto ela tambem possui uma propriedade type na qual você poderá modificar os marcadores da lista. Por padrão estes marcadores vem configurados no type disc que basicamente é uma bolinha preta, mas além dele temos o circle que é uma bolinha vazia e temos o squad que é um quadrado preto-->
+            <li>Acordar</li>
+            <li>Rezar</li>
+            <li>Escovar os dentes</li>
+            <li>Tomar café</li>
+            <li>Procastinar</li>
+            <li>Estudar</li>
+            <li>Namorar</li>
+            <li>Brincar com meu filhotinho</li>
+        </ul>
+
+
+    <h2>Minhas linguagens favoritas</h2>
+    <ol>
+        <li>Antigas</li>
+        <ol type="a">
+            <li>Clipper</li>
+            <li>Visual Basic</li>
+            <li>Fortran</li>
+            <li>Delphi</li>
+    </ol>
+        <li>Novas</li>
+        <ol type="a" start="5"><!--A tag ol tem uma propriedade chamada start="" que permite que façamos modificações na sequencia de nossa lista. Por exemplo, aqui temos 2 listas com 4 itens cada uma, definimos através de uma outra propriedade o type="" que nossas listas seriam ordenadas através de letras minúsculas, ou seja temos uma lista ol contendo a,b,c,d e outra também com a,b,c,d. No entanto usando o start="5" com o parâmetro 5 nós podemos dar continuidade alfabética de uma lista para outra, ou seja ao invés termos duas sequencias a,b,c,d temos agora a,b,c,d,e,f,g,h, pois definimos o start="5" que quer dizer que apartir do quinto elemento nossa lista vai dar continuidade a lista anterior-->
+            <li>PHP</li>
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>Kotlin</li>
+        </ol>
+    </ol>
+    <h2>Meus jogos favoritos</h2>
+    <ol>
+        <li>NES</li>
+        <ul type="square">
+            <li>Super Mario:</li>
+            <ul type="disc">
+                <li>Super MArio Bros 3</li>
+                <li>Super Mario bros 2</li>
+            </ul>
+            <li>Mega man</li>
+        </ul>
+        <li>SNES</li>
+        <ol>
+            <li>Super Mario word</li>
+            <li>Donkey kong</li>
+        </ol>
+        <li>PlayStation</li>
+        <ol>
+            <li>Driver</li>
+            <li>PES</li>
+        </ol>
+    </ol>
+    <h2>Lista de definição</h2>
+    <dl><!--Esta tag representa uma lista de defiçao "definition list" dentro desta tag podemops usar outras duas, são ela o dt "definition term" que representa o termo a ser definido e o dd "definition description"-->
+        <dt>HTML</dt><!--(TERMO)-->
+        <dd>Linguagem de marcação de hiper texto par criação do conteúdo de uma página web.</dd><!--(DESCRIÇÃO)-->
+        <dt>CSS</dt>
+        <dd>Linguagem de marcação para estilizar uma pagina da Web através de folhas de estilos.</dd>
+        <dt>JAVASCRIPT</dt>
+        <dd>Linguagem de programação para criação de interatividade de um site e o dinamismo das páginas Web.</dd>
+    </dl>
+
+</body>
+</html>

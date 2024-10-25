@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonts com Google Fonts</title>
+</head>
+<style>
+          
+          @import url('https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap');
+          @font-face {
+          font-family:'Duna' ;
+          src: url('fonts/Dune_Rise.ttf') format('truetype'),
+          url('fonts/Dune_Rise.otf') format('opentype');
+          }
+          @font-face {
+            font-family:'school' ;
+            src: url('fonts/old_school_united_stencil.ttf') format('truetype');
+          }
+          @font-face {
+            font-family:'Vermin';
+            src: url('fonts/Inversionz\ Unboxed.ttf') format('truetype');
+          }
+          h1, h2, h3, p{
+            
+            padding-left: 10px;
+          }
+          h1, h2, h3{
+             height: 45px;
+             text-align: center;
+             align-content: center;
+             margin-top: 0;
+           }
+           body{
+            display: flex;
+            margin: auto;
+            flex-direction: column;
+           }
+           p{
+            margin-top: 5px;
+            text-align:center;
+           }
+/*Tipos de Medidas:
+
+Medidas absolutas:
+cm, mm, in, px, pt, pc
+
+Medidas relativas:
+em, ex, rem, vw, vh, %
+em = 16px
+
+Medidas padronizadas: px, em */
+
+
+/*Fontes externas
+Existem vários sites de fontes além do google fontes, por exemplo o site DAFONTE. Escolha o site e a fonte desejados, baixe a fonte, extraia a pasta e escreva igual ao conteúdo da pasta.
+
+Tipos de format()
+-opentype (otf)
+-truetype (ttf)
+-embedded-opentype
+-truetype-att (Apple Advanced Typography)
+-svg
+OBS: Quando for escolher a fonte desejada, procure saber qual é o seu formato correto para não ter erro ao escrever no css.
+*/
+
+    body{
+        background-image: linear-gradient(to right, #06036e, #3226b4, #041624);
+    }
+    h1{
+        font-family: "Vermin", sans-serif;
+        background-color: chartreuse;
+        font-size: 4em;
+        font-weight: 500;
+        
+    
+    }
+
+    p{
+        font:italic bolder 1.5em  "Sixtyfour Convergence", sans-serif;/*Aqui estou usando a propriedade shorthands. Com ela eu consigo dizer várias coisas em uma só linha bastando usar o font: seguido do estilo, peso, tamanho e família da fonte. OBS: Precisa ser nesta ordem, senão não funciona.*/
+        color: #fff;
+    }
+    h2{
+        font-family:'Duna';
+        background-color: chartreuse;
+        font-size: 1.5rem;
+        font-weight: bold;
+      
+    }
+    h3{
+        font-family: 'school';
+        background-color: chartreuse;
+        font-size: 2.5rem;
+        font-weight: lighter;
+        color: rgb(22, 35, 22);
+    }
+</style>
+<body>
+    <h1>Título</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A, qui nesciunt assumenda quaerat doloremque dolorem libero unde dolor. Expedita vero perferendis neque quo mollitia iste facilis commodi. Ipsa, nobis unde!</p>
+
+    <h2>Fontes Personalizadas</h2>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus porro reprehenderit quidem. Modi perspiciatis sed atque corrupti, autem impedit omnis aliquam delectus. Quia ab nulla eos facere labore dolore eum?Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, architecto id fugit quo illo suscipit ratione autem numquam nesciunt. Eum fuga saepe ea quam id optio deleniti eos veniam facere.</p>
+    <h3>Fontes no font-face</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, ea. Explicabo, placeat voluptate accusamus impedit necessitatibus aspernatur accusantium culpa repellat at mollitia, maiores assumenda reiciendis excepturi corrupti doloribus aut. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil quis deserunt fuga ex, explicabo nisi facere in consequatur asperiores magni ut dolorum sunt consequuntur placeat expedita vitae neque perferendis laudantium!</p>
+    
+</body>
+</html>

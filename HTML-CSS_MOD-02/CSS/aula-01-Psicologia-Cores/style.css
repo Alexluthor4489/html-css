@@ -1,0 +1,61 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body, html{
+    height: 100%;
+    
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    height:calc(100vh - 0px);
+        
+}
+.container div{
+    display: flex;
+    flex: 1;
+    width: 100%;
+    align-items: center;
+    font-weight: 600;
+    
+    
+}
+.class0{
+    display: flex;
+    background-color: deeppink;
+    align-items: center;
+    justify-content: center;
+    color: rgb(81, 229, 180);
+   }
+.class1{
+    
+    background-color: blueviolet;
+    color:rgb(231, 196, 40);
+    padding-left: 5px;
+}
+.class2{
+    
+    background-color:dodgerblue;
+    color: rgb(205, 118, 11);
+    padding-left: 5px;
+}
+.class3{
+    
+    background-color:darkblue;
+    color: rgb(184, 101, 0);
+    padding-left: 5px;
+}
+.class4{
+    
+    background-color:forestgreen;
+    color: rgb(120, 5, 28);
+    padding-left: 5px;
+}
+.class5{
+    
+    background-color:goldenrod;
+    color: rgb(21, 117, 212);
+    padding-left: 5px;
+}

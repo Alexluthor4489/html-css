@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bordas Decoradas</title>
+</head>
+<style>
+    header > h1{
+        border: 15px solid black;
+        padding: 10px;
+        border-image-source: url('img/Tabuleiro\ de\ cores.png');
+        border-image-repeat: repeat;/*Aqui basicamente ele vai repetir a imagem de acordo com a quantidade que vc quer, fazendo com que a imagem contorne a caixa criando assim uma borda decorativa. Lembrando que para definir a quantidade de vezes que a imagem vai se repetir,usamos o border-image-slice: 25; aqui definido como 25 repetições*/
+        border-image-slice: 25;
+
+        /*Usando o SHOTHAND fica desta forma primeiro a URL depois a quantidade e por ultimo  o repeat*/
+        border-image: url('img/Tabuleiro\ de\ cores.png') 25 repeat ;
+        
+    }
+</style>
+<body>
+    <header>
+        <h1>Teste de Bordas</h1>
+    </header>
+    
+</body>
+</html>
