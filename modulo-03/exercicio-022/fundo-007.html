@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centralizando caixas na vertical</title>
+    <style>
+        body{
+            background-color: rgb(250, 252, 251);
+        }
+        #container{
+            background-image: url('imagens/target001.png');
+            background-size: 100% 100%;/*Esta sendo usando para que nossa imagem ocupe 100% da altura e largura do nosso container*/
+            position: relative;
+            height: 500px;
+            padding: 10px;
+            background-color: blue;
+        }/*A regra diz que; o container externo deve ter um position relative, que por sinal por padrão já esta relativo, mas memso assim é uma boa prática adicionar esta configuração*/
+        #conteudo{
+            background-image: url('imagens/target001.png');
+            background-size: 100% 100%;
+            position: absolute;
+            height: 200px;
+            width: 400px;
+            background-color:#00ff11;
+            left: calc(50% - 200px);/*Aqui estamos definindo que o container vai ficar em 50% da tela, porém ele leva em consideração o eixo x,y do container, ou seja, ele não centraliza no centro absoluto tanto na largura quanto na altura. Para isso temos 2 opções, podemos usar dentro do left e top a função calc( ) para ajustar manualmente o centro. Neste caso como a largura da imagem tem 400px, eu defini que o left iria ter um calc de 50% menos a metade do tamanho do container, ou seja, 200px. Usei o mesmo raciocínio para calcular o top*/
+            top: calc(50% - 100px);
+
+            /*OUTRA FORMA DE CENTRALIZAR*/
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);/*Usando valores negativos conseguimos voltar o container para exatamente 50% do eixo x e y. O raciocínio foi bem semelhante ao que usamos no calc. Basicamente definimos a metade do tamanho da caixa tanto na altura quanto na largura para ser o eixo central absoluto*/
+
+        }/*A regra também nos diz que todo conteiner interno deve ter um position absoluto. Com esta função absoluto, nós ganhamos duas novas propriedades: left:; o top:; com eles modemos mover nossa imagem oara onde quisermos dentro no nosso container pai.*/
+            
+    </style>
+</head>
+<body>
+    <section id="container">
+        <article id="conteudo">
+
+        </article>
+    </section>
+</body>
+</html>
