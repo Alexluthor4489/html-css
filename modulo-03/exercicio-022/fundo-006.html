@@ -12,21 +12,35 @@
             background-position: center center;/*Aqui estamos definindo um ponto específico da imagem para ancorar. Neste caso definimos o centro absoluto da nossa imagem.*/
             background-repeat: no-repeat;/*Aqui estamos definindo que nossa imagem não vai se repetir para ocupar todo o espço da tela*/
             background-size: cover;/*O bakground com a função "cover", serve para cobrir a tela inteira, mesmo que ele precise contar algum pedaço da imagem. Sua vantagem é uma melhor adaptação em qualquer tamamnho de tela se m a distorção da imagem. Outra função é o "contaim", ele vai adatar a imagem, mas sem fazer cortes. */
+            background-attachment: fixed;/*Esta função permite fixar o fundo. Normalmente quando scrolamos o nosso conteúdo principal, o fundo acompanha o movimento, mas com esta função podemos scrolar o nosso conteúdo e o fundo por trás permanece imovel*/
+            /*SHORTHAND - BACKGROUND
+              Orden: color > image > position > repeat > [size] > attachment
+            */
+            background: black url('imagens/wallpaper002.jpg') center center no-repeat cover fixed ;
+            /*Nesta ordem temos exatamente as mesmas funções que todo bloco de código background do nosso body, porém agora em uma única linha de código*/
+            /*OBS: Apezar de a documentação incluir o background size: cover; os navegadores ainda não ò reconhecem, então por excessão retiramos apenas ele do nos shorthand*/
+
         }
         main{
-            background-color: white;
-            width: 400px;
+            background-color: rgb(216, 221, 227);
+            max-width: 500px;
             padding: 10px;
             border: 2px solid black;
             border-radius: 10px;
             margin: auto;/*Centraliza um bloco ao centro horizontal*/
             text-align: justify;/*Aqui optei por deixar meu texto lorem justificado.*/
         }
+        p{
+            font-size: x-large;
+        }
     </style>
 </head>
 <body>
     <main>
         <h1>Teste de Imagem de Fundo</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, eius repellendus quod dolore earum porro soluta placeat praesentium veniam aliquam dignissimos atque vel architecto itaque ipsa nostrum, nisi nam consectetur. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta laudantium quaerat tenetur sapiente quia tempora molestiae magnam facilis debitis fuga explicabo reiciendis porro recusandae optio sit, quasi sunt. Nulla, maiores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere optio possimus aliquid aut error, molestiae esse natus illum maiores sequi repellendus impedit tenetur. Illum, labore sit. Ducimus voluptates officia commodi.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, eius repellendus quod dolore earum porro soluta placeat praesentium veniam aliquam dignissimos atque vel architecto itaque ipsa nostrum, nisi nam consectetur. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta laudantium quaerat tenetur sapiente quia tempora molestiae magnam facilis debitis fuga explicabo reiciendis porro recusandae optio sit, quasi sunt. Nulla, maiores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere optio possimus aliquid aut error, molestiae esse natus illum maiores sequi repellendus impedit tenetur. Illum, labore sit. Ducimus voluptates officia commodi.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, eius repellendus quod dolore earum porro soluta placeat praesentium veniam aliquam dignissimos atque vel architecto itaque ipsa nostrum, nisi nam consectetur. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta laudantium quaerat tenetur sapiente quia tempora molestiae magnam facilis debitis fuga explicabo reiciendis porro recusandae optio sit, quasi sunt. Nulla, maiores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere optio possimus aliquid aut error, molestiae esse natus illum maiores sequi repellendus impedit tenetur. Illum, labore sit. Ducimus voluptates officia commodi.</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, eius repellendus quod dolore earum porro soluta placeat praesentium veniam aliquam dignissimos atque vel architecto itaque ipsa nostrum, nisi nam consectetur. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta laudantium quaerat tenetur sapiente quia tempora molestiae magnam facilis debitis fuga explicabo reiciendis porro recusandae optio sit, quasi sunt. Nulla, maiores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere optio possimus aliquid aut error, molestiae esse natus illum maiores sequi repellendus impedit tenetur. Illum, labore sit. Ducimus voluptates officia commodi.</p>
     </main>
     
