@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table{
+            width: 500px;
+            height: 500px;
+            border-collapse:collapse;/*Serve para definirmos os espaços entre as células da tabela. Por padrão ele vem com a função separate, mas mudamos para função collapse, esta função retira os espaços entre as células deixando apenas a borda existente entre elas.*/
+        }
+        td{
+            border: 1px solid black;
+            padding: 15px;
+            text-align: center;
+            vertical-align: top;/*É uma ótima opção para deslocar o conteúdo das células verticalmente. Aqui estamos definindo que o conteúdo vai ficar no topo. Um ponto de observação é que, diferente da maioria das funções de posição, Aqui temos o Top = Topo, Bottom = baixo, mas o meio nào é o Center e sim "middle" este vem por padrão.*/
+        }
+        /*OBS: Normalmente em uma planilha do excel, os numeros ficam posicionados a direita nas células. Neste caso basta criar uma class definindo que determinada class vai ser posicionada a direita como por exemplo: text-align: rigth;*/
+        
+        .l-01 {
+            background-color: cornflowerblue;
+        }
+        .l-02 {
+            background-color: chartreuse;
+        }
+        .l-03 {
+            background-color: gold;
+        }
+        .l-04 {
+            background-color:aqua ;
+        }
+    </style>
+</head>
+<body>
+    <h1>Minha primeira tabela</h1>
+    <!--Hierarquia de Tabelas (Simples)
+        Table = Tabela
+        Table > (tr)Table row = Linha da Tabela
+        Table > (th)Table header = Cabeçalho da Tabela
+        Table > (td)Table Data = Dados da Tabela
+
+    -->
+    <strong>
+        <table>
+            <tr class="l-01"><!--Primeira Linha-->
+                <td>A1</td><!--Primeira coluna-->
+                <td>B1</td><!--Segunda coluna-->
+                <td>C1</td><!--Terceira coluna-->
+            </tr>
+            <tr  class="l-02"><!--Segunda Linha-->
+                <td>A2</td><!--Primeira coluna-->
+                <td>B2</td><!--Segunda coluna-->
+                <td>C2</td><!--Terceira coluna-->
+            </tr>
+            <tr class="l-03"><!--Terceira Linha-->
+                <td>A3</td><!--Primeira coluna-->
+                <td>B3</td><!--Segunda coluna-->
+                <td>C3</td><!--Terceira coluna-->
+            </tr>
+            <tr class="l-04"><!--Quarta Linha-->
+                <td>A4</td><!--Primeira coluna-->
+                <td>B4</td><!--Segunda coluna-->
+                <td>C4</td><!--Terceira coluna-->
+            </tr>
+        </table>
+
+    </strong>
+    
+</body>
+</html>
