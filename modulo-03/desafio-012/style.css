@@ -30,17 +30,16 @@ header > h1 {
     padding-top: 50px;
     /*text-transform: uppercase; Tranforma todas as letras contidas na caixa em maiúsculas*/
     font-variant: small-caps;/*Também deixa todas as letras maiúsculas porém ele respeita as letras inicias e as deixa com tamanho maior*/
+    font-family: var(--fonte2);
+    font-size: 10vw;/*Para uma melhor adaptação para diversos tamanhos de tela, configuramos o tamanho da fonte em 10% do tamanho da tela, assim idependente da teal, seja se desktop, seja tablet ou celular o tamanho vai ser proporcional e adaptável. Vale lembra que o mediaQuerry é melho maneira de se fazer isso, mas como ainda não estamos neste nível, vamos usar o que temos por enquanto.*/
+    font-weight: normal;
 }
 header > p {
-    font-size: 1.3em;
+
     background-color: black;
     padding-bottom: 50px;
     font-family: var(--fonte1);
-}
-
-p {
-    font-family:var(--fonte3);
-    padding: 40px;
+    font-size: 1.2vw;
 }
 
 a {
@@ -59,20 +58,29 @@ footer {
     color: white;
     padding: 10px;
 }
-footer > p{
+
+footer > p {
     font-family: var(--fonte1);
-    font-size: 19px;
+    font-size: 1em;
 }
 
-section{
+section {
     padding-top: 10vh;/*Aqui definimos que as nossas sections iram ter 10% da altura da tela no topo. Isso pode ser feito através de porentagem também.*/
     padding-bottom: 10vh;/*Aqui definimos que as nossas sections iram ter 10% da altura da tela em baixo. Isso pode ser feito através de porentagem também.*/
     line-height: 2em;/*Permite alterar os espaços entre linhas. Neste caso estamos usando um espaçamento duplo com o 2em*/
     padding-left: 30px;
+    font-size: 2.5vw;
+    font-family: var(--fonte3);
+}
+
+section > p {
+    padding-bottom: 2em;/*Foi usado para resolver o espaçamento nas sections que tinham parágrafos duplos. Agora temos um espaço de 2x o espaçamento original separando um parágrafo e outro*/
 }
 section.imagem-fundo > p {
+    display: inline-block;/*Usamos para fazer com que a caixa que está envolvendo o parágrafo se adapte ao tamanho dele seja em altura ou largura*/
     background-color: rgba(0, 0, 0, 0.068);
-    width: 400px;
+    padding: 10px;/*Serve para não deixar as letras do verso a garradas no limite da caixa de fundo.*/
+    
 }
 
 section.imagem-fundo {
