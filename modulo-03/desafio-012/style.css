@@ -78,18 +78,33 @@ section > p {
 }
 section.imagem-fundo > p {
     display: inline-block;/*Usamos para fazer com que a caixa que está envolvendo o parágrafo se adapte ao tamanho dele seja em altura ou largura*/
-    background-color: rgba(0, 0, 0, 0.068);
+    background-color: rgba(0, 0, 0, 0.500);
     padding: 10px;/*Serve para não deixar as letras do verso a garradas no limite da caixa de fundo.*/
+    text-shadow: 1px 1px 0px black;
     
 }
 
 section.imagem-fundo {
     background-color: rgb(55, 55, 60);
     color: white;
-
+    box-shadow: inset 6px/*Espalhamento horizontal*/ 6px/*Espalhamento Vertical*/ 15px/*Espalhamento*/ 0px/*Ampliação*/ rgba(0, 0, 0, 0.63);
+    background-size: cover;/*Serve para ajustar a imagem mesmo que precise corta-la para que ocupe a tela inteira. Sua vantagem é uma melhor adaptação a qualquer tamanho de tela.*/
 }
 
 section.normal{
     background-color: white;
     color: black;
+}
+
+section#img-01 {
+    background-image: url('imagens/background001.jpg');
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+section#img-02 {
+    background-image: url('imagens/background002.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
