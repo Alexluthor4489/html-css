@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        table {
+           width: 50%;
+           height: 600px;
+           border-collapse: collapse;
+           font-family: Arial, Helvetica, sans-serif;
+        }
+        td, th {
+            border: 1px solid black;
+            padding: 15px;
+            text-align: center;
+            font-size: 150%;
+        }
+        th {
+            background-color: aquamarine;
+            width: 150px;
+        
+        }   
+        a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+        tfoot tr {
+            min-height: 100px;
+            background-color: darkblue;
+            color: white;
+            text-transform: uppercase;   
+            font-size: 16px;
+        }
+        .linha-01{
+            background-color: blue;
+        }
+        .linha-02{
+            background-color: rgb(116, 231, 0);
+        }
+        .linha-03{
+                background-color: blueviolet;
+        }
+        .linha-04{
+                background-color: coral;
+        }
+        .linha-05{
+                background-color: rgb(2, 219, 219);
+        }
+        .linha-06{
+                background-color: rgb(14, 152, 14);
+        }
+        .linha-07{
+                background-color:dodgerblue;
+        }
+        .linha-08{
+                background-color: gold;
+        }
+        .linha-09{
+                background-color: deeppink;
+        }
+        .linha-10{
+                background-color: darkcyan;
+        }
+    </style>
+</head>
+<body>
+    <h1>Uso de tabelas grandes</h1>
+    <!--ANATOMIA PARA TABELAS GRANDES
+    TABLE
+        THEAD
+            TR, TD, TH
+        TBODY
+            TR, TD, TH
+        TFOOT
+            TR, TD TH
+    -->
+    <table><!--Quando falamos de tabela, tudo começa com a tag table e em seguida suas ramificações-->
+        <thead><!--O thead é a cabeça da nossa tabela. Ele é intuítivo e o próprio nome já nos diz que ele é responsável pelo o espaço do cabeçalho e as ramificações que estiverem dentro dele võa ser referentes ao cabeçalho da nossa tabela-->
+            <tr><!--Como esse tr está dentro da nossa thead, então ela vai ser responsável pela linha do nosso cabeçalho-->
+                <th>POSIÇÃO</th><!--Aqui usamos o th para representarmos os conteúdos do nosso cabeçálho. Como se trata de um cabeçalho não usamos o td que normalmente é usado para representar os conteúdos da célula e sim o th por se tratar do conteúdo de uma thead-->
+                <th>ESTADO</th>
+                <th>POPULAÇÃO</th>
+                <th>% POPULAÇÃO DO PAÍS</th>
+            </tr>
+        </thead>
+        <tbody><!--É usado para representar o corpo da nossa tabela com suas tr (linhas) e td (conteúdo das colunas)-->
+            <tr class="linha-01"><!--Representa cada linha da nossa tabela-->
+                <td>1</td><!--Representa cada conteúdo de coluna e cada célula-->
+                <td><a href="https://pt.wikipedia.org/wiki/S%C3%A3o_Paulo_(estado)" target="_blank">São Paulo</a></td>
+                <td>45.973</td>
+                <td>21,88%</td>
+            </tr>
+            <tr class="linha-02">
+                <td>2</td>
+                <td><a href="https://pt.wikipedia.org/wiki/Minas_Gerais" target="_blank">Minas Gerais</a></td>
+                <td>21.322</td>
+                <td>10,11%</td>
+            </tr>
+            <tr class="linha-03">
+                <td>3</td>
+                <td><a href="https://pt.wikipedia.org/wiki/Rio_de_Janeiro_(estado)" target="_blank">Rio de Janeiro</a></td>
+                <td>17.219</td>
+                <td>7,91%</td>
+            </tr>
+            <tr class="linha-04">
+                <td>4</td>
+                <td><a href="https://pt.wikipedia.org/wiki/Bahia" target="_blank">Bahia</a></td>
+                <td>14.850</td>
+                <td>6,96%</td>
+            </tr>
+            <tr class="linha-05">
+                <td>5</td>
+                <td><a href="https://pt.wikipedia.org/wiki/Paran%C3%A1" target="_blank">Paraná</a></td>
+                <td>11.824</td>
+                <td>5,64%</td>
+            </tr>
+            <tr class="linha-06">
+                <td>6</td>
+                <td><a href="https://pt.wikipedia.org/wiki/Rio_Grande_do_Sul" target="_blank">Rio Grande do Sul</a></td>
+                <td>11.229</td>
+                <td>5,36%</td>
+            </tr>
+            <tr class="linha-07">
+                <td>7</td>
+                <td><a href="https://pt.wikipedia.org/wiki/Pernambuco" target="_blank">Pernambuco</a></td>
+                <td>9.539</td>
+                <td>4,46%</td>
+            </tr>
+            <tr class="linha-08">
+                <td>8</td>
+                <td><a href="https://pt.wikipedia.org/wiki/Cear%C3%A1" target="_blank">Ceará</a></td>
+                <td>9.233</td>
+                <td>4,33%</td>
+            </tr>
+            <tr class="linha-09">
+                <td>9</td>
+                <td><a href="https://pt.wikipedia.org/wiki/Par%C3%A1" target="_blank">Pará</a></td>
+                <td>8.664</td>
+                <td>4,1%</td>
+            </tr>
+            <tr class="linha-10">
+                <td>10</td>
+                <td><a href="https://pt.wikipedia.org/wiki/Santa_Catarina" target="_blank">Santa Catarina</a></td>
+                <td>8.058</td>
+                <td>3,75%</td>
+            </tr>
+            
+        </tbody>
+        <tfoot>
+                <tr>
+                    <td colspan="2">Total de habitantes dos 10 estados</td><!--Usei o atributo colspan para fazer com que meu foot, mesmo com uma coluna a menos ocupasse toda a largura da tabela. Neste caso eu o configurei para que ocupasse o espaço de 2 colunas-->
+                    <td> 157.911</td>
+                    <td>74,5%</td>
+                </tr>
+        </tfoot>
+    </table>
+    
+</body>
+</html>
