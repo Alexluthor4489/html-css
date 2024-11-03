@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Tabela 2</title>
+    <style>
+        table, td{
+            width: 400px;
+            height: 60px;
+            border-collapse: collapse;
+            text-align: center;
+            font-weight: bold;
+            background-color:rgb(0, 255, 34);
+            font-size: 22px;
+        }
+        td{
+            border: 1px solid black;
+        }
+        .modificada {
+            background-color: darkturquoise;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="4" class="modificada">A</td>
+            <td rowspan="4" class="modificada">B</td>
+        </tr>
+
+        <tr>
+            <td rowspan="4" class="modificada">C</td>
+            <td>D</td>
+            <td>E</td>
+            <td>F</td>
+        </tr>
+
+        <tr>
+            <td>G</td>
+            <td>H</td>
+            <td>I</td>
+        </tr>
+
+        <tr>
+            <td>J</td>
+            <td>L</td>
+            <td>M</td>          
+        </tr>
+
+        <tr>
+            <td colspan="4" class="modificada">N</td>                                  
+        </tr>
+    </table>
+    
+</body>
+</html>
