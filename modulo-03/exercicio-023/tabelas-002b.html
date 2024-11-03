@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            text-align: center;
+        }
+        table {
+           width: 50%;
+           border-collapse: collapse;
+           position: relative;
+           margin: auto;
+           height: 100vh; /* Limite de altura para rolagem */
+           overflow-y: auto; /* Habilita rolagem */
+           display: block; /* Torna a rolagem aplicável no conteúdo interno */
+        }
+        
+        caption {
+            padding: 10px;
+            font-size: 150%;
+            font-weight: bolder;
+        }
+        tbody > tr:nth-child(2n) {/*Aqui estamos fazendo o efeito zebra na tabela para facilitar sua vizualização. Para este efeito usamos o atributo :nth-child(2n), basicamente ele está pegando todos os filhos(child) de tbody que sejam tr e dando a eles 2 cores diferentes de forma intercalada. A quantidade de cores é definida por (2n), neste caso 2 cores e depois é só definir o background-color desejado. Se optar por (3n) por exemplo, ele vai se comportar da seguinte forma, ele pula 2 linhhas e colore a terçeira e assim sucessivamente.*/
+
+            background-color: lightblue;
+
+        /*OBS: Temos outras propriedade do atributo :nth-child( ) que podem nos dar o efeito zebrado também, como o (odd) que destaca apenas as linhas ímpares ou com o (even) que destaca apenas as linhas pares. Com isso chegamos também à um efeito zebrado. Nestes dois caso podemos definir separadamente as cores de ímpares e pares também.*/
+        }
+        thead, tfoot{
+            background-color: deepskyblue;
+        }
+        thead > tr > th {
+            position: sticky;/*Quer dizer grudar, ou seja, vamos grudar o nosso thead em algum ponto que vai ser definido a seguir.*/
+            top:0;/*Aqui estamos definindo onde ele vai ser colado. Neste caso estamos defindo que ele vai ficar colado no topo. Normalmente esse valor é zero, mas como estava ficando com uma linha mínima mesmo com zero, então foi definido o -1 para sumir com essa linha mínima que tinha entre o head e o topo da tela.*/
+            background-color: deepskyblue;/*Mesmo com as configurações acima, quando rolava a tela, os titulos deciam mas o background-color não, então definimos aqui o mesmo background-color do nosso thead*/
+            z-index: 1;
+        }
+       
+        td, th {
+            border: 1px solid black;
+            padding: 15px;
+            text-align: center;
+            font-size: 150%;
+        }
+        th {
+            width: 150px;
+        
+        }   
+        a {
+            color: blue;
+            text-decoration: none;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+        tfoot tr{
+            min-height: 100px;
+            text-transform: uppercase;   
+            font-size: 16px;
+            font-weight: bold;
+        }
+        p {
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    
+    <!--ANATOMIA PARA TABELAS GRANDES
+    TABLE
+        THEAD
+            TR, TD, TH
+        TBODY
+            TR, TD, TH
+        TFOOT
+            TR, TD TH
+    -->
+   
+        <table><!--Quando falamos de tabela, tudo começa com a tag table e em seguida suas ramificações-->
+            <caption>População dos 10 Estados Mais Populosos do Brasil</caption>
+            <thead><!--O thead é a cabeça da nossa tabela. Ele é intuítivo e o próprio nome já nos diz que ele é responsável pelo o espaço do cabeçalho e as ramificações que estiverem dentro dele võa ser referentes ao cabeçalho da nossa tabela-->
+                <tr><!--Como esse tr está dentro da nossa thead, então ela vai ser responsável pela linha do nosso cabeçalho-->
+                    <th scope="col">POSIÇÃO</th><!--Aqui usamos o th para representarmos os conteúdos do nosso cabeçálho. Como se trata de um cabeçalho não usamos o td que normalmente é usado para representar os conteúdos da célula e sim o th por se tratar do conteúdo de uma thead-->
+                    <th scope="col">ESTADO</th><!--O atributo scope serve para nos informar a que determina célula es'ta se referindo. Neste caso estamos dizendo que cada th está se referindo a sua respectiva coluna. Quando queremos representar uma coluna usamos scope="col" em caso de linhas usamos sope="row"-->
+                    <th scope="col">POPULAÇÃO</th>
+                    <th scope="col">% POPULAÇÃO</th>
+                </tr>
+            </thead>
+            <tbody><!--É usado para representar o corpo da nossa tabela com suas tr (linhas) e td (conteúdo das colunas)-->
+                <tr class="linha-01"><!--Representa cada linha da nossa tabela-->
+                    <td scope="row">1</td><!--Representa cada conteúdo de coluna e cada célula-->
+                    <td><a href="https://pt.wikipedia.org/wiki/S%C3%A3o_Paulo_(estado)" target="_blank">São Paulo</a></td>
+                    <td>45.973</td>
+                    <td>21,88%</td>
+                </tr>
+                <tr class="linha-02">
+                    <td scope="row">2</td>
+                    <td><a href="https://pt.wikipedia.org/wiki/Minas_Gerais" target="_blank">Minas Gerais</a></td>
+                    <td>21.322</td>
+                    <td>10,11%</td>
+                </tr>
+                <tr class="linha-03">
+                    <td scope="row">3</td>
+                    <td><a href="https://pt.wikipedia.org/wiki/Rio_de_Janeiro_(estado)" target="_blank">Rio de Janeiro</a></td>
+                    <td>17.219</td>
+                    <td>7,91%</td>
+                </tr>
+                <tr class="linha-04">
+                    <td scope="row">4</td>
+                    <td><a href="https://pt.wikipedia.org/wiki/Bahia" target="_blank">Bahia</a></td>
+                    <td>14.850</td>
+                    <td>6,96%</td>
+                </tr>
+                <tr class="linha-05">
+                    <td scope="row">5</td>
+                    <td><a href="https://pt.wikipedia.org/wiki/Paran%C3%A1" target="_blank">Paraná</a></td>
+                    <td>11.824</td>
+                    <td>5,64%</td>
+                </tr>
+                <tr class="linha-06">
+                    <td scope="row">6</td>
+                    <td><a href="https://pt.wikipedia.org/wiki/Rio_Grande_do_Sul" target="_blank">Rio Grande do Sul</a></td>
+                    <td>11.229</td>
+                    <td>5,36%</td>
+                </tr>
+                <tr class="linha-07">
+                    <td scope="row">7</td>
+                    <td><a href="https://pt.wikipedia.org/wiki/Pernambuco" target="_blank">Pernambuco</a></td>
+                    <td>9.539</td>
+                    <td>4,46%</td>
+                </tr>
+                <tr class="linha-08">
+                    <td scope="row">8</td>
+                    <td><a href="https://pt.wikipedia.org/wiki/Cear%C3%A1" target="_blank">Ceará</a></td>
+                    <td>9.233</td>
+                    <td>4,33%</td>
+                </tr>
+                <tr class="linha-09">
+                    <td scope="row">9</td>
+                    <td><a href="https://pt.wikipedia.org/wiki/Par%C3%A1" target="_blank">Pará</a></td>
+                    <td>8.664</td>
+                    <td>4,1%</td>
+                </tr>
+                <tr class="linha-10">
+                    <td scope="row">10</td>
+                    <td><a href="https://pt.wikipedia.org/wiki/Santa_Catarina" target="_blank">Santa Catarina</a></td>
+                    <td>8.058</td>
+                    <td>3,75%</td>
+                </tr>
+                <tr class="linha-01"><!--Representa cada linha da nossa tabela-->
+                    <td scope="row">1</td><!--Representa cada conteúdo de coluna e cada célula-->
+                    <td><a href="https://pt.wikipedia.org/wiki/S%C3%A3o_Paulo_(estado)" target="_blank">São Paulo</a></td>
+                    <td>45.973</td>
+                    <td>21,88%</td>
+                </tr>
+                <tr class="linha-02">
+                    <td scope="row">2</td>
+                    <td><a href="https://pt.wikipedia.org/wiki/Minas_Gerais" target="_blank">Minas Gerais</a></td>
+                    <td>21.322</td>
+                    <td>10,11%</td>
+                </tr>
+                <tr class="linha-03">
+                    <td scope="row">3</td>
+                    <td><a href="https://pt.wikipedia.org/wiki/Rio_de_Janeiro_(estado)" target="_blank">Rio de Janeiro</a></td>
+                    <td>17.219</td>
+                    <td>7,91%</td>
+                </tr>
+                <tr class="linha-04">
+                    <td scope="row">4</td>
+                    <td><a href="https://pt.wikipedia.org/wiki/Bahia" target="_blank">Bahia</a></td>
+                    <td>14.850</td>
+                    <td>6,96%</td>
+                </tr>
+                <tr class="linha-05">
+                    <td scope="row">5</td>
+                    <td><a href="https://pt.wikipedia.org/wiki/Paran%C3%A1" target="_blank">Paraná</a></td>
+                    <td>11.824</td>
+                    <td>5,64%</td>
+                </tr>
+                <tr class="linha-06">
+                    <td scope="row">6</td>
+                    <td><a href="https://pt.wikipedia.org/wiki/Rio_Grande_do_Sul" target="_blank">Rio Grande do Sul</a></td>
+                    <td>11.229</td>
+                    <td>5,36%</td>
+                </tr>
+                <tr class="linha-07">
+                    <td scope="row">7</td>
+                    <td><a href="https://pt.wikipedia.org/wiki/Pernambuco" target="_blank">Pernambuco</a></td>
+                    <td>9.539</td>
+                    <td>4,46%</td>
+                </tr>
+                <tr class="linha-08">
+                    <td scope="row">8</td>
+                    <td><a href="https://pt.wikipedia.org/wiki/Cear%C3%A1" target="_blank">Ceará</a></td>
+                    <td>9.233</td>
+                    <td>4,33%</td>
+                </tr>
+                <tr class="linha-09">
+                    <td scope="row">9</td>
+                    <td><a href="https://pt.wikipedia.org/wiki/Par%C3%A1" target="_blank">Pará</a></td>
+                    <td>8.664</td>
+                    <td>4,1%</td>
+                </tr>
+                <tr class="linha-10">
+                    <td scope="row">10</td>
+                    <td><a href="https://pt.wikipedia.org/wiki/Santa_Catarina" target="_blank">Santa Catarina</a></td>
+                    <td>8.058</td>
+                    <td>3,75%</td>
+                </tr>
+        
+            </tbody>
+            <tfoot>
+                    <tr>
+                        <th colspan="2" scope="row">Total de habitantes dos 10 estados</th><!--Usei o atributo colspan para fazer com que meu foot, mesmo com uma coluna a menos ocupasse toda a largura da tabela. Neste caso eu o configurei para que ocupasse o espaço de 2 colunas. usei também o scpe para indicar que esta célua se refere ao conteúdo que está na sua linha e não em sua coluna.-->
+        
+                        <td>157.911</td>
+                        <td>74,5%</td>
+                    </tr>
+            </tfoot>
+        </table>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam numquam dolore, saepe distinctio perferendis beatae minus rerum quo eligendi! Commodi modi cumque eveniet optio quia ab assumenda aspernatur iste quidem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, veniam molestias corrupti perspiciatis error perferendis illum quam rem architecto porro repellendus eveniet ratione eligendi voluptatem a atque sed incidunt delectus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda fugit magnam itaque odio error laboriosam, vitae atque accusamus sapiente ea in quasi pariatur dignissimos, quaerat eveniet exercitationem laudantium nemo? Repellat? Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem corporis commodi, quaerat quis modi dolore. Cupiditate, culpa praesentium magnam ea sit minus aspernatur dolor autem aut, iure laborum voluptatem nesciunt?</p>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam numquam dolore, saepe distinctio perferendis beatae minus rerum quo eligendi! Commodi modi cumque eveniet optio quia ab assumenda aspernatur iste quidem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, veniam molestias corrupti perspiciatis error perferendis illum quam rem architecto porro repellendus eveniet ratione eligendi voluptatem a atque sed incidunt delectus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda fugit magnam itaque odio error laboriosam, vitae atque accusamus sapiente ea in quasi pariatur dignissimos, quaerat eveniet exercitationem laudantium nemo? Repellat? Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem corporis commodi, quaerat quis modi dolore. Cupiditate, culpa praesentium magnam ea sit minus aspernatur dolor autem aut, iure laborum voluptatem nesciunt?</p>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam numquam dolore, saepe distinctio perferendis beatae minus rerum quo eligendi! Commodi modi cumque eveniet optio quia ab assumenda aspernatur iste quidem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, veniam molestias corrupti perspiciatis error perferendis illum quam rem architecto porro repellendus eveniet ratione eligendi voluptatem a atque sed incidunt delectus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda fugit magnam itaque odio error laboriosam, vitae atque accusamus sapiente ea in quasi pariatur dignissimos, quaerat eveniet exercitationem laudantium nemo? Repellat? Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem corporis commodi, quaerat quis modi dolore. Cupiditate, culpa praesentium magnam ea sit minus aspernatur dolor autem aut, iure laborum voluptatem nesciunt?</p>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam numquam dolore, saepe distinctio perferendis beatae minus rerum quo eligendi! Commodi modi cumque eveniet optio quia ab assumenda aspernatur iste quidem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, veniam molestias corrupti perspiciatis error perferendis illum quam rem architecto porro repellendus eveniet ratione eligendi voluptatem a atque sed incidunt delectus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda fugit magnam itaque odio error laboriosam, vitae atque accusamus sapiente ea in quasi pariatur dignissimos, quaerat eveniet exercitationem laudantium nemo? Repellat? Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem corporis commodi, quaerat quis modi dolore. Cupiditate, culpa praesentium magnam ea sit minus aspernatur dolor autem aut, iure laborum voluptatem nesciunt?</p>
+      
+</body>
+</html>
