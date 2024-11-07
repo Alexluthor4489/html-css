@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício de Tabelas</title>
+    <style>
+        :root{
+            --cor1:#5f0494;
+            --cor2:#c74ef0;
+            --cor3:#fff022f0;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            text-align: center;
+        }
+        caption {
+            padding: 15px;
+            font-weight: bold;
+        }
+        table{
+            border-collapse: collapse;
+            width: 600px;
+            height: 300px;
+            font-size: 1.3em;
+            margin: auto;
+        }
+        th, td{
+            border: 1px solid black;
+            padding: 5px;
+        }
+        th {
+            background-color: var(--cor1);
+            color: white;
+        }
+               
+        /*tbody > tr:nth-child(2n){
+            background-color: var(--cor2);
+        }*/
+        col.cnome {
+            background-color: var(--cor2);
+        }
+        col.cgroup {
+            background-color: var(--cor3);
+        }
+       
+    </style>
+</head>
+<body>
+    <h1>Exercício de Tabelas</h1>
+    <table>
+        <colgroup><!--O html 5 troxe uma novidade que é a tag colgroup, ela nos permite personalizar colunas inteiras sem a nescessidade de termos que adicionar uma classe para cada item da coluna. basta criar uma classe para cada título da coluna-->
+            <col class="cnome">
+            <col class="cgroup" span="3"><!--Outra dica importante é que podemos criar uma class que irá englobar uma n quantidade de outras classes através do atributo span=: ; Neste caso deixamos a primeira coluna com a coroxa e a partir da segunda coluna definimos que sua configuração vai englobar as próximas 3 colunas, neste caso atribuímos a esta noca classe o  nome c group e demos a ela uma cor amarela.-->
+            <col class="csexo">
+            <col class="cidade">
+            <col class="cprof">
+
+           
+        </colgroup>
+        <caption>Cadastro</caption>
+        <thead>
+            <tr>
+                <th scope="col">Nome</th>
+                <th scope="col">Sexo</th>
+                <th scope="col">Idade</th>
+                <th scope="col">Profissão</th>
+
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Ana Maria</td>
+                <td>F</td>
+                <td>25</td>
+                <td>Jornalista</td>
+            </tr>
+            <tr>
+                <td>Cláudio</td>
+                <td>M</td>
+                <td>28</td>
+                <td>Programador</td>
+            </tr>
+            <tr>
+                <td>Gustavo</td>
+                <td>M</td>
+                <td>42</td>
+                <td>Professor</td>
+            </tr>
+            <tr>
+                <td>Hélio</td>
+                <td>M</td>
+                <td>19</td>
+                <td>Vendedor</td>
+            </tr>
+            <tr>
+                <td>Maria</td>
+                <td>F</td>
+                <td>39</td>
+                <td>Médica</td>
+            </tr>
+            <tr>
+                <td>Otávio</td>
+                <td>M</td>
+                <td>22</td>
+                <td>Nutricionista</td>
+            </tr>
+            
+        </tbody>
+
+        <tfoot>
+            <tr>
+
+            </tr>
+        </tfoot>
+
+    </table>
+    
+</body>
+</html>
