@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas responsivas</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+        #container{
+            overflow-x:auto ;
+            /*O orverflow significa aquilo que transbora, ou seja, significa transbordar. Ele é responsável em anular a rolagem da tela até certo ponto. O overflow-x:; é responsavel pela rolagem horizontal e o o overflow-y:; é responsávwel pela rolagem vertical. O overflow:; sozinho se reponsabiliza por ambas as rolagens, tanto a vertical quanto a horizontal. Neste caso vamos nos procupar com a rolagem horizonral e por isso vamos usar o overflow-x:;*/
+            /*Vale lembrar que quando a tela for muito pequena, ele vai gerar um scrol que permite que a tabela seja vizualizada scrolando para o lado ou para cima dependendo do caso.*/
+
+        }
+        table{
+            border-collapse: collapse;
+            min-width: 400px;
+            background-attachment: fixed;
+        }
+        caption{
+            text-align: left;
+            font-size: 1.2em;
+            font-weight: bolder;
+            padding: 20px;
+        }
+        th, td{
+            border: 1px solid black;
+            padding: 10px;
+        }
+        tbody > tr:nth-child(2n){
+            background-color: rgb(192, 144, 244);
+        }
+        th{
+            background-color: blueviolet;
+            color: white;
+        }
+        p{
+            text-align: justify;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tabelas em telas pequenas</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, beatae minus possimus itaque reprehenderit quidem aperiam pariatur eum tempore, tenetur cumque? Dolorum, cumque tempora! Vel hic aperiam debitis odit fugit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque illum minima architecto distinctio neque assumenda non sunt, totam sit amet suscipit ipsum fugiat saepe officiis aliquam, ad nemo, ratione doloremque? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima doloribus nesciunt adipisci labore quod perspiciatis, rerum consequuntur! Itaque eum iste, incidunt deserunt eligendi, aspernatur magni mollitia consequatur magnam deleniti accusantium.</p>
+    <div id="container">
+        <table>
+        <caption>Tabelas responsivas</caption>
+        <thead>
+            <tr>
+                <th>Produtos</th>
+                <th>Jan</th>
+                <th>Fev</th>
+                <th>Mar</th>
+                <th>Abr</th>
+                <th>Mai</th>
+                <th>Jun</th>
+                <th>Jul</th>
+                <th>Ago</th>
+                <th>Set</th>
+                <th>Out</th>
+                <th>Nov</th>
+                <th>Dez</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Tv Philips 55"</td>
+                <td>01</td>
+                <td>04</td>
+                <td>07</td>
+                <td>12</td>
+                <td>12</td>
+                <td>10</td>
+                <td>05</td>
+                <td>02</td>
+                <td>01</td>
+                <td>01</td>
+                <td>04</td>
+                <td>16</td>
+            </tr>
+            <tr>
+                <td>Home Theater</td>
+                <td>01</td>
+                <td>04</td>
+                <td>07</td>
+                <td>12</td>
+                <td>12</td>
+                <td>10</td>
+                <td>05</td>
+                <td>02</td>
+                <td>01</td>
+                <td>01</td>
+                <td>04</td>
+                <td>16</td>
+            </tr>
+            <tr>
+                <td>Smsung Galaxy S24 Ultra</td>
+                <td>01</td>
+                <td>04</td>
+                <td>07</td>
+                <td>12</td>
+                <td>12</td>
+                <td>10</td>
+                <td>05</td>
+                <td>02</td>
+                <td>01</td>
+                <td>01</td>
+                <td>04</td>
+                <td>16</td>
+            </tr>
+            <tr>
+                <td>iPad Mini</td>
+                <td>01</td>
+                <td>04</td>
+                <td>07</td>
+                <td>12</td>
+                <td>12</td>
+                <td>10</td>
+                <td>05</td>
+                <td>02</td>
+                <td>01</td>
+                <td>01</td>
+                <td>04</td>
+                <td>16</td>
+            </tr>
+            <tr>
+                <td>PlayStation 5</td>
+                <td>01</td>
+                <td>04</td>
+                <td>07</td>
+                <td>12</td>
+                <td>12</td>
+                <td>10</td>
+                <td>05</td>
+                <td>02</td>
+                <td>01</td>
+                <td>01</td>
+                <td>04</td>
+                <td>16</td>
+            </tr>
+            <tr>
+                <td>Lava Louças</td>
+                <td>01</td>
+                <td>04</td>
+                <td>07</td>
+                <td>12</td>
+                <td>12</td>
+                <td>10</td>
+                <td>05</td>
+                <td>02</td>
+                <td>01</td>
+                <td>01</td>
+                <td>04</td>
+                <td>16</td>
+            </tr>
+            <tr>
+                <td>Amazon Echo</td>
+                <td>01</td>
+                <td>04</td>
+                <td>07</td>
+                <td>12</td>
+                <td>12</td>
+                <td>10</td>
+                <td>05</td>
+                <td>02</td>
+                <td>01</td>
+                <td>01</td>
+                <td>04</td>
+                <td>16</td>
+            </tr>
+        
+        </tbody>
+    </div>
+    </table>
+</body>
+</html>
