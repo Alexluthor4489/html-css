@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo de iframe</title>
+    <style>
+        iframe{
+            width: 500px;
+            height: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Testando o uso de um iframe</h1>
+     <!--Por padrão um iframe tem um tamanho de 300x150, caso queira mudar de uma forma mais simples você pode fazer manualmente dentro da tag de abertura do iframe. Exemplo: <iframe Src="#" frameborder="0" width="500" height="700"> assim vc consegue configurar o tamanho desejado.
+    OBS: Vale lembrar que se você fizer uma nova configuração dentro das CSS, se esta configuração for diferente é ela que vai prevalecer, pois a CSS é soberana neste caso. Caso não tenhamos nenhuma configuração nas CSS então fica valendo a configuração local. Neste caso vale observar que a configuração local não é inline , não está sendo usado o style-->
+
+    <h2>Método tradicional</h2>
+
+    <p>
+        Acessando o site do <a href="https://www.cursoemvideo.com" target="_blank">CursoemVideo</a> para aprender a programar.
+    </p>
+
+    <h2>Sites que permitem o uso do iframe</h2>
+
+    <p>
+            Acessando o site do 
+
+        <iframe src="https://www.cursoemvideo.com" frameborder="0" height="400" width="500" scolling="auto"><!--Serve para definir o scrol de uma imagem. O auto se apdapta automático. O "Yes" insere uma barra de scrol mesmo que a imagem não seja grande o suficiente para isso. O "No" não permite barra de rolagem, porém em alguns sistemas operacionais, mesmo com o uso do "no", o sistema permitiu a barra de rolagem quando a imagem tinha tamanho suficiente para isso.-->
+            <a href="https://www.cursoemvideo.com">CursoemVideo</a>
+        </iframe>
+
+        para aprender a programar. 
+    </p>
+
+    <p>
+        O repositório do Guanabára
+
+        <iframe src="https://gustavoguanabara.github.io" frameborder="0">
+            no<a href="https://gustavoguanabara.github.io">GitHub</a>
+        </iframe>
+
+         também é bem legal!
+
+    </p>
+
+    <h2>Sites que bloqueiam o iframe</h2>
+
+    <p>
+        O site do 
+
+        <iframe src="https://www.google.com.br/" frameborder="0">
+        </iframe>
+        <a href="https://www.google.com.br/" target="_blank">Google.com</a>
+        também é muito legal, pena que não funciona dentro do iframe.
+
+    </p><!--Vale lembrar que alguns sites tem mecanismos de defesa que bloqueiam o iframe ipedindo que ele carregue estes sites e o googleé um deles-->
+
+</body>
+</html>
