@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body html{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;/*Faz com que não tenha scrol*/
+            
+        }
+
+        iframe#tela {
+            width:100%;
+            height:100%;
+            border: 1px solid black;
+            border-radius: 10px;
+            background-color: chartreuse;
+        }
+        
+        a {
+            text-decoration: none;
+            color: blue;
+            border-radius: 3px;
+        }
+        a, p{
+            font-size: 1.2em;
+        }
+        ul li {
+            padding: 6px;
+           
+        }
+        a:hover{
+            background-color: blue;
+            color: white;
+        }
+        button {
+            width: 5%;
+            margin: auto;
+            margin-top: 10px;
+            padding: 3px;
+            font-size: 1.1em;
+            border-radius: 5px;
+            color: blue;
+        }
+        button:hover{
+            background-color: blue;
+            color: white;
+        }
+        
+        #container p{
+            width: 100%;
+            max-width: 100%;
+            padding: 10px;
+            text-align: justify;
+            
+        }
+        #container{
+            padding: 10px;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;   
+            font-family: Arial, Helvetica, sans-serif; 
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1></h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit necessitatibus repudiandae iusto iste assumenda deleniti eveniet? Neque reiciendis consequuntur rerum, explicabo quod magnam! Non illo provident ut reprehenderit, molestiae earum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas magni ullam, nesciunt nobis repudiandae officia odio laboriosam quaerat illo quasi architecto aperiam saepe ipsam rem qui recusandae, inventore sunt tempore.
+        </p>
+        <ul>
+            <li><a href="paginas-extras/pag-001.html" target="frame">Primeira página</a></li>
+            <li><a href="paginas-extras/pag-002.html" target="frame">Segunda página</a></li>
+            <li><a href="paginas-extras/pag-003.html" target="frame">Terceira página</a></li><!--Para que o nosso conteúdo seja exibido dentro do iframe da página atual, e necessário que o o iframe tenha um name pois esse name será solicitado dentro do target:name que você deu ao iframe; para que isso funcione.-->
+        </ul>
+        
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos iure obcaecati facere ipsum ullam? Laboriosam iste id quod impedit nemo numquam sed a, alias aperiam at hic commodi iusto explicabo? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, assumenda. Quia itaque minus sint! Qui, consectetur asperiores! Qui animi est, aut consectetur, ab quod, reiciendis magnam ut rem officia maiores?</p>
+        <!--O srcdoc é uma função do iframe que permite inserirmos HTML dentro dele e aqui neste exemplo adicionamos um H1, um P e uma IMG. Um ponto de atenção em relação ao srcdoc é que ele é um atrubuto que usa aspas duplas para inserimos o conteúdo html lá dentro, então quando o conteúdo HTML desejado também utilizar áspas, então as mesmas terão que ser simples para não gerar erro!-->
+        <iframe id="tela" name="frame" srcdoc="<h1>&ltiframe&gt</h1><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, odio repudiandae. Totam mollitia distinctio, qui iste, repellat libero iusto veniam ea impedit aspernatur ducimus dignissimos magnam accusamus vitae temporibus odio? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil sequi eveniet ipsum molestias voluptatum enim iste est nesciunt, placeat deserunt. Possimus numquam ratione cum quia odio assumenda adipisci, nam eum. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo aliquid ipsa unde id corporis laudantium officia sit ex eum, temporibus nihil enim nesciunt magni non necessitatibus eaque voluptatem vel? Nam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam ut possimus consequuntur eveniet? Eligendi eveniet iste sunt assumenda soluta nesciunt ipsa amet quod itaque hic. Exercitationem fugit rem quam minima.</p> <img src='../imagens/cursoemvideo-logo.png'>"><!--Aqui aprendemos como reproduzir o conteúdo da nossa páginas direto de um iframe, ou seja, agora quando clicamos em um link, não somos desviados para outra página, o que acontece agora é; quando clicamos no link o conteúdo é exibido dentro do quadro de iframe da página que estamos, como neste exemplo. É como se nossa tela tivesse uma janela dinâmica na qual clicamos em algo e aquilo é reproduzido em nossa janela dinâmica se a necessidade de irmos para outras páginas.-->
+            <p>Seu navegador não é compatível!</p>
+        </iframe>
+        <button><a href="iframe-003.html">Voltar</a></button>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis accusantium aspernatur sed porro rerum, nemo illo nihil. Nisi similique dolore fugit! Similique, quam enim. Rem vero sit magni. Vel, et! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus vitae, eligendi voluptatem provident exercitationem rem illum! Voluptatum esse aut deserunt et nulla, enim nesciunt necessitatibus maiores quam assumenda aliquid omnis.
+        </p>
+    </div>
+</body>
+</html>
