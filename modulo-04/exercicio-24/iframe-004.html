@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        iframe{
+            border: 1px solid black;
+            width: 400px;
+            height: 150px;
+            border-radius: 10px;
+        }
+    
+    </style>
+</head>
+<body>
+    <h1>Meu site principal</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, nostrum vitae delectus nobis enim sed voluptatem et eaque officia reprehenderit, eos quae fugiat vero dolor animi cumque aut saepe ut?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, nostrum vitae delectus nobis enim sed voluptatem et eaque officia reprehenderit, eos quae fugiat vero dolor animi cumque aut saepe ut?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, nostrum vitae delectus nobis enim sed voluptatem et eaque officia reprehenderit, eos quae fugiat vero dolor animi cumque aut saepe ut?</p>
+    <!--Abaixo vamos ver um exemplo de iframe mais seguro e para isso vamos usar dois atributos do iframe. O primeiro atributo é o sandbox="sandbox", ele tem o papel de bloquear os sites que estão dentro od iframe para que eles não coletem iformações do usuário como por exemplo através de uma página de cadastro ele atua bloqueando qualquer comendo de envio de cadastro ou de dados. 
+    O segundo é o referrerpolicy="no-referrer" com isso estamos impedindio que o site que está dentro do iframe colete qualquer dado.-->
+    <iframe src="paginas-extras/pag-004.html" sandbox="sandbox" referrerpolicy="no-referrer"><!--O sandbox possui outras configurações que permitem algumas ações se frem especificadas dentro dele, como por exemplo o envio de formulários, o envio de scripts entre outras variações encontradas dentro de sandbox basta conhecelas usanod o ctrl espaço.-->
+        Seu Navegador não é compatível
+    </iframe>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, nostrum vitae delectus nobis enim sed voluptatem et eaque officia reprehenderit, eos quae fugiat vero dolor animi cumque aut saepe ut?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, nostrum vitae delectus nobis enim sed voluptatem et eaque officia reprehenderit, eos quae fugiat vero dolor animi cumque aut saepe ut?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, nostrum vitae delectus nobis enim sed voluptatem et eaque officia reprehenderit, eos quae fugiat vero dolor animi cumque aut saepe ut?</p>
+</body>
+</html>
