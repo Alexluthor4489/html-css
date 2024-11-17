@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Teste de Formulário</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <fieldset style="border: 1px solid black;"><!--O fieldset serve para criar um agrupamento de campos no qual podem ser evidenciados e separados por assuntos diferentes e com o legend podem ser titulados.-->
+            <legend>Dados Pessoais</legend>
+            <p>
+                <label for="inome">Nome</label>
+                <input type="text" name="nome" id="inome" required minlength="2" maxlength="50">
+            </p>
+            <p>
+                <label for="">Email</label>
+                <input type="email" name="email" id="iemail" autocomplete="email" required>
+            </p>
+            <p>
+                <label for="itelefone">Contato</label>
+                <input type="tel" name="tel" id="itelefone" autocomplete="tel" required >
+            </p>
+        </fieldset>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+
+        </p>
+    </form>
+</body>
+</html>

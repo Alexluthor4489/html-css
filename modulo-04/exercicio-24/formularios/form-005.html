@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Teste de Formulário</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+
+        <fieldset style="border: 1px solid black; border-radius: 10px; width: 10%; font-size: 1.1em; margin-bottom: 20px;">
+
+            <legend style="font-size: 1.2em; font-weight: bolder;">Sexo</legend>
+            <!--Diferente do checkbox o radius só aceita marcar uma opção quando você tenta marcar uma segunda opção, ele automaticamente desmarca a primeira, mas para isso funcionar corretamente os names devem ser iguais, no exemplo abaixo podemos perceber que os id são diferentes, mas todos os names são sexo.-->
+            <input type="radio" name="sexo" id="ifeminino" value="F"> <label for="ifeminino">Feminino</label> <br>
+            <input type="radio" name="sexo" id="imasculino" value ="M"> <label for="imasculino">Masculino</label> <br>
+            <input type="radio" name="sexo" id="indeciso" value ="?"> <label for="indeciso">Tô Pensando</label>
+
+        </fieldset>
+
+        <fieldset style="border: 1px solid black; border-radius: 10px; width: 10%; font-size: 1.1em; margin-bottom: 20px; ">
+
+            <legend style="font-size: 1.2em; font-weight: bolder;">Esporte favorito</legend>
+            <!--O checkbox funciona sem o label, porém você precisará clicar exatamente em cima da caixinha para poder ativar o checkbox, mas se você usar a label também, basta que você clic na palavra que a caixa vai ser marcada.-->
+
+            <input type="checkbox" name="futebol" id="ifutebol"> <label for="ifutebol">Futebol</label> <br>
+            <input type="checkbox" name="basquete" id="ibasquete"> <label for="ibasquete">Basquete</label> <br>
+            <input type="checkbox" name="volei" id="ivolei"> <label for="ivolei">Volei</label> <br>
+            <input type="checkbox" name="automobilismo" id="iautomobilismo"> <label for="iautomobilismo">Automobilismo</label> <br>
+            <input type="checkbox" name="ufc" id="iufc"><label for="iufc"> UFC</label>
+
+        </fieldset>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
