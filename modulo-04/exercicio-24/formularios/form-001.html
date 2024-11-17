@@ -18,11 +18,20 @@
 <body>
     <h1>Meu Formulário</h1>
 
-    <form action="cadastro.js"><!--Nos formulários são comuns aparecerem algumas sugestões para facilitar na hora de preenchermos os dados, porém em alguns caso esses popaps de sugestões pode incomodar ou simplismete não ser necessário. Nesses caso podemos usar o autocomplete="off" para desabilitar esta função padrão.-->
-    <!--INPUT
-    O input é usado dentro da tag form para construção de um formulario. Ele tem algumas propriedades como: type="", name="" e id="". O type é para definir qual é o propósito daquele campo de formulário, qual vai ser o tipo de dado coletado, se é um campo onde vai texto, então é do type="text", se é para preencher com números, então vai ter que ser um type="number"-->
-    <!--LABEL
-    O label serve para etiquetar um formulário otmizando sua funcionalidade e visibilidade. A label trás apenas um atrbuto, O for="" quer dizer para que, ou seja é o mesmo que a label perguntando: O que é para etiquetar. Dentro do atributo for vai ser inserido a identificação do que deve ser etiquetado ou rotulado, ou seja, vamos inserir o id do input,pois é ele que vai ser etiquetado pela nossa label.-->
+    <form action="cadastro.php" method="post" autocomplete="on"><!--Nos formulários são comuns aparecerem algumas sugestões para facilitar na hora de preenchermos os dados, porém em alguns caso esses popaps de sugestões pode incomodar ou simplismete não ser necessário. Nesses caso podemos usar o autocomplete="off" para desabilitar esta função padrão.
+
+    INPUT
+    O input é usado dentro da tag form para construção de um formulario. Ele tem algumas propriedades como: type="", name="" e id="". O type é para definir qual é o propósito daquele campo de formulário, qual vai ser o tipo de dado coletado, se é um campo onde vai texto, então é do type="text", se é para preencher com números, então vai ter que ser um type="number"
+
+    LABEL
+    O label serve para etiquetar um formulário otmizando sua funcionalidade e visibilidade. A label trás apenas um atrbuto, O for="" quer dizer para que, ou seja é o mesmo que a label perguntando: O que é para etiquetar. Dentro do atributo for vai ser inserido a identificação do que deve ser etiquetado ou rotulado, ou seja, vamos inserir o id do input,pois é ele que vai ser etiquetado pela nossa label.
+
+    METHOD
+    É um método é responsável por inserir ou não os dados da nossa página na URL da página. Ele tem algumas propriedades, mas as principais são GET e post. 
+
+    O GET exibe os dados na URL e é indicado quando nossa página não contém conteúdos sensiveis como senhas, nomes, contas de banco por exemplo e quando queremos que nossa URL seja compartilhável. O GET tem uma limite de envio de até bytes, ou seja, 3 mil letras, mais do que isso já é indicado o uso de outros métodos. 
+    
+    O Post, oculta os dados na nossa URL, sendo indicado para páginas que contém dados importantes, porém ainda não é totalmente seguro, pois há como ver seus dados. Para ocutar de vez os dados é necessário o protocolo https que vamos aprender mais tarde.-->
 
         <p><label for="inome">Nome:</label> <input type="text" name="nome" id="inome"></p>
 

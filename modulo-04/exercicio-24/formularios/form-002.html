@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Teste de formulário</h1>
+    <form action="cadastro.php" method="get" autocomplete="on"><!--Como ja vimos o autocomplete pode estar em dois estados, on ou off. Se ele estiver ativado podemos usa-lo nos nossos inputs e lá ele vai ter vários estados disponíveis-->
+    <p>
+        <label for="iusuario">Usuário</label>
+        <input type="text" name="usuario" id="iusuario" required placeholder="Nome do usuário" autocomplete="username"><!--O atributo required faz com que o campo tenha seu preenchimento como obrigatório. Já o placeholder, cria uma sobra contendo a dica daquele campo e assim que começamos digitar, aquela orientação some. Neste caso dentro do nosso campo vai estar escrito de forma suave semelhante  a uma sobra, Nome do usuário, mas este texto sumirá a partit do momento que eu digito o primeiro carácter.-->
+    </p>
+    <p>
+        <label for="isenha">Senha</label>
+        <input type="password" name="senha" id="isenha" required minlength="8" autocomplete="new-password"><!--O atributo required junto com a propriedade minlength="8" ou maxlength="8" serve para definir o tamanho dos dados a serem inseridos naquele determinado campo. Por exemplo se tivermos um required minlength="8" e um maxlength="12", significa que a senha deve ter no mínimo 8 carácteres e no máximo 12.ë possível fazer restrições mais avançadas também como apenas números ou que tenha uma quantidade específica de carácteres especiais entre muitas outras.-->
+    </p>
+
+    <p>
+        <input type="submit" value="Enviar"><!--O Atributo type="submit" é usado para um envio de formulário-->
+        <input type="reset" value="Limpar"><!--O Atributo Type="reset" é usado como opção para limpar o formulário ou como o próprio nome já ilustra, reseta o formulário-->
+    </p>
+    </form>
+
+</body>
+</html>
