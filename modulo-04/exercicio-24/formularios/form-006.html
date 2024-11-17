@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Teste de Formulários</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <p>
+            <label for="icor">Cor</label>
+            <input type="color" name="cor" id="icor" value="#00ff00">
+        </p>
+        <p>
+            <label for="inivel">Nível de Satisfação</label>
+            <input type="range" name="nivel" id="inivel" min="0" max="100" value="50"><!--Estou configurando nosso ranger para que ele seja no mínimo 0 e no máximo 100, mas por padrao ele começa em 50 graças ao value que foi definido em 50.-->
+        </p>
+        <p>
+            <label for="iarquivo">Foto Perfil</label>
+            <input type="file" name="arquivo" id="iarquivo">
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+    
+</body>
+</html>
