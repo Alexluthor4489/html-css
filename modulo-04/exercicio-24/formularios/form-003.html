@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Teste de Formulário</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+    <p>
+        <label for="inome">Nome</label>
+        <input type="text" name="nome" id="inome" required maxlength="30" placeholder="Nome completo" autocomplete="name">
+    </p>
+    <P>
+        <label for="imedia">Média</label>
+        <input type="number" name="media" id="imedia" required max="10" min="0" placeholder="Nota" step="0.5" ><!--Aqui usamos o max para definir uma nota máxima possível e o min para definir uma  nota mínima possível, porémse colocarmos um numero flutante ele não vai aceitar, por isso vamos usar o step="0.5", step significa passo, ou seja ele nos pergunta de quanto em quanto ele vai aceitar os números. Como é muito comum em notas termos números quebrados então definimos através do nosso step que as notas aceitas poderam ser de 0.5 em 0.5. se você quiser ser ainda mais preciso, pode reconfigurá-lo para step="0.1", assim ele aceita qualquer número.-->
+    </P>
+    <p>
+        <label for="imes">Período Letivo</label>
+        <input type="month" name="mes" id="imes" required>
+    </p>
+    <p>
+        <label for="itime">Horário</label>
+        <input type="time" name="time" id="itime" required>
+    </p>
+    <p>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+    </p>
+    </form>
+</body>
+</html>
