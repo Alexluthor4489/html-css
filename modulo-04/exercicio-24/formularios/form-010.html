@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+
+        <p>
+            <label for="iano_atual"> Qual é o ano atual? </label>
+            <input type="number" name="ano_atual" id="iano_atual" required oninput="minha_idade.innerHTML = Number(iano_atual.value) - Number(iano_nascimento.value)">
+        </p>
+
+        <p>
+            <label for="iano_nascimento">Em que ano você nasceu?</label>
+            <input type="number" name="ano_nascimento" id="iano_nascimento" required oninput="minha_idade.innerHTML = Number(iano_atual.value) - Number(iano_nascimento.value)">
+        </p>
+
+        <p>
+            <label for="minha_idade">Sua idade é: </label>
+            <output name="idade" id="minha_idade">0</output>
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+    
+</body>
+</html>

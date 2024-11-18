@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        
+        <p>
+            <label for="in1">Número 1</label>
+            <input type="number" name="n1" id="in1" min="0" max="50" required oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)"><!--Para o output funcionar corretamente e realizar a nossa soma dos inputs n1 e n2, primeiro usamos em cada input, ou seja, tudo que for feito em n1 terá que ser feito em n2, Começamos usando o oninput: serve para unir os inputs depois pegamos o id e pedimos para o nosso document html ler o que tem dentro da seguinte forma: isoma.innerHTML, feito isso agora usamos o atributo NUmber inserimos dentro de parêntese o in1.value, ou seja, o valor de in1 Number(in1.value) + 
+            -->
+        </p>
+        <p>
+            <label for="in1">Número 2</label>
+            <input type="number" name="n2" id="in2" min="0" max="50" required
+            oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+        </p>
+        <p> <!--O output seve para pegar dados de dois inputs e representá-los, como por exemplo em uma soma. Neste caso ele seria o resultado entre 2 inputs de números, mas isso só é possivel usando algumas técnicas básicas de JavaScrip-->
+            <label for="isoma">Soma = </label>
+            <output name="somar" id="isoma">0</output>
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+
+
+    </form>
+    
+</body>
+</html>

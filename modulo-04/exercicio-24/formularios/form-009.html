@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        
+        <p><!--Quando usamos o ranger temos um pequeno problema, nós determinamos um valor min e um valor max, porém quando alteramos o indicador do range, e paramos em uma posição aleatória, não sabemos exatamente qual é o valor daquela determinada posição, então para resolver isso usamos novamente o oninput. Primeiro criamos um output para determinar um valor padrão para o lado externo do nosso range, depois usamos o oninput dentro do input de range para que ele use o id do output para ser lido pelo innerHTML e associado através do NUmber ao id do input range através do inum.value ou seja, o valor do id inum.-->
+            <label for="inum"></label>
+            <input type="range" name="num" id="inum" min="0" max="10" oninput="ivalor.innerHTML = Number(inum.value)">
+            <output id="ivalor">5</output>
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+    
+</body>
+</html>
