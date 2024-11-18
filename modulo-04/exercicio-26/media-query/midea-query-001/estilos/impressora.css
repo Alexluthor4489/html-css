@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+*{
+    margin: 10;
+    padding: 10;
+}
+html {
+    font-family: 'Courier New', Courier, monospace; /*Esta font é uma boa opção para impressão por ter o mesmo espaçamento entre os carácteres idependente da sua estrutura.*/
+    font-size: 1em;
+    line-height: 1.5em; /*Define o espaçamento entre as linhas*/
+}
+menu {
+    display: none; /*Não faz muito sentido que tenhamos um menu na impressão pois o menu envolve funcionalidades e aqui estamos interesados apenas na parte visual*/
+}
+article::after {/**/.
+
+}
