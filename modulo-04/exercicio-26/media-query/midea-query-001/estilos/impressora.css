@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
 *{
-    margin: 10;
-    padding: 10;
+    margin: 10px;
+    padding: 10px;
 }
 html {
     font-family: 'Courier New', Courier, monospace; /*Esta font é uma boa opção para impressão por ter o mesmo espaçamento entre os carácteres idependente da sua estrutura.*/
@@ -12,6 +12,13 @@ html {
 menu {
     display: none; /*Não faz muito sentido que tenhamos um menu na impressão pois o menu envolve funcionalidades e aqui estamos interesados apenas na parte visual*/
 }
-article::after {/**/.
-
+article {
+    width: 100%;/*o 100% no article garante que o artigo de texto vai ocupar 100% do espaço do papel.*/
+}
+article::after {/*::after: depois, ou seja o after asociado ao article quer dizer que seu conteúdo vai ser exibido após o article durante a impressão*/
+    content: 'Esse cooonteúdo foi impresso através dp site www.cursoemvideo.com';
+}
+p {
+    text-align: justify;
+   
 }
