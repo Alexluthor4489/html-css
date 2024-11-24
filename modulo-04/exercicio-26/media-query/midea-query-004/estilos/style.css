@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+ html {
+   
+    height: 100vh;/*configurando o body e o html para que âmbos tenhas um aproveitamento de 100% tanto na largura quanto na altura*/
+}
+ body {
+    background: black url('../imagens/back-phone.jpg') no-repeat;/*Configurando um background que tenha a cor preta, uma url com uma imagem dentro e que esta imagem não se repita para preencher todo o espaço*/
+    background-size: cover;/*Configurando para que a imagem ocupe todo o espaó disponível do body*/
+    background-position: center center;/*Selecionando a posição epecífica da imagem a sr visualizada*/
+}
+ main {
+    background-color: rgba(255, 255, 255, 0.671);
+    width: 400px;
+    margin: auto;/*Centralizando o main*/
+    margin-top: 20px;/*Criando uma margem superior de 20px*/
+    border-radius: 10px;
+    padding: 10px;/*Grrando um espaço completo de 10px ao redor*/
+}
+h1 {
+    text-align: center;/*Centralizando o texto*/
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 0px rgba(57, 55, 57, 0.744); /*Criando uma sombra no texto que tenha 2px de espalhamento horizontal, 2px de espalhamento vertical e que tenha a cor preta*/
+    font-size: 2em;/*definindo o tamanho do h1 como 2em, ou seja 2x o tamanho da fonte original*/
+}
+img{/*Configuração geral para as imagens ficarem centralizadas*/
+    display: block;
+    margin: auto;
+}
+/*O CONCEITO DE MOBILE FISRT SIGINIFICA O MENOR PRIMEIRO. Primeiro criamos uma página personalizada para smartphnes e depois vamos adaptando para os outros diverss tipos de telas*/
+img#telefone {display: block;}
+img#tablet {display: none;}
+img#impressora {display: none;}
+img#desktop {display: none;}
+img#televisao {display: none;}
