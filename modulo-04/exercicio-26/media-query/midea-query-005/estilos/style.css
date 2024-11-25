@@ -47,6 +47,7 @@ menu > ul > li > a {
 menu > ul > li a:hover{
     background-color: rgb(224, 224, 224);
     color: mediumblue;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.53);
 }
 main {
     width: 90vw;
