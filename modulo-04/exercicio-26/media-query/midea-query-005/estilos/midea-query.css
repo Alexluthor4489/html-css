@@ -1,0 +1,29 @@
+@charset "UTF-8";
+/* Typical Device Breackpoints
+-------------------------------
+Telas muito pequenas: até 600px
+Telas de smarphones: 601px até 768px
+Telas de Tablets: 769px até 992px
+Telas de Desktops: 993px até 1200px
+Telas de Monitores maiores: a partir de 1201px 
+*/
+
+@media screen and (min-width: 768px) {/*Aqui o media query foi configurado da seguinte maneira; Quando a nossa tela tiver no mínimo 768px, então já terá tamanho suficiente para comportar o menu aberto. Se a tela não alcançar este tamanho, então o menu vai aparecer fechado representado pelo ícone menu e será exibido apenas quando clicado.*/
+    span#burguer {
+        display: none;
+    }
+    menu {
+        display: block;
+    }
+    menu > ul > li {
+        display: inline-block;
+        padding: 5px;
+        
+    }
+    menu > ul > li > a{
+        border-radius: 5px;
+    }
+    main {
+        width: 768px;
+    }
+}  
