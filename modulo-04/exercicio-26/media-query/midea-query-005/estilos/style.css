@@ -10,6 +10,7 @@ html, body{
 }
 header{
     background-color: rgb(210, 206, 206);
+    text-align: center;
 }
 header > h1{
     padding: 10px;
