@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        div.container {
+            
+            display: flex;/*Ao usar o flexbox, é importante saber que ele é aplicado ao container pai e esse container ficar responsável em adaptar o seu conteúdo.
+            Por padrão o display flex fica na direção row, ou seja, seu flex-direction é row oque quer dizer linha, na grande maioria dos idiomas, da esquerda para direita. Para mudar outra direção, devemos recorrer ao flex-direction: row-reverse; (linha ivertida da direita para esquerda) e o flex-direction: colum;(para deixar o container em coluna) e no caso de uma coluna invertida, ou seja, de baixo para cima se usa o colum-reverse*/
+        }
+        div.item {
+            
+            background-color: darkblue;
+            flex: auto;/*É muito importante, pois ele é responsávem por fazer com que o conteúdo do container filho, fique fluído ou seja, se adpate ao tamanho do container pai. No exemplo que temos abaixo com as letras, antes de usar o flex auto, as letras estavam em uma só linha por causa do fléxbox que é uni-direcional e estavam espremidas no canto esquerdo desta linha, pois como o espaço que cada letra ocupa é pequeno, então ele ocupou um pequeno espaço no canto esquerdo, o que já foi o suficiente para comportar todas as letras, mas ao usar o flex auto, o que aconteceu foi que os containers de cada uma destas letras se epicharam se adaptando por igual ao tamanho do container pai, ocupando toda sua extensão.*/
+            border: 1px solid white;
+            border-radius: 15px;
+            color: lightblue;
+            text-align: center;
+            height: 100px;
+            align-content: center;
+        }
+            /*EIXOS (AXIS)
+            Os eixos axis são os eixos principais do nosso conteúdo principal ou do(s) nosso(s) container(s) filho(s).
+            O MAIN-AXIS é o eixo horizontal ou seja ele corta o conteúdo no centro, na horizontal da direita para esquerda, mas essa direção vai variar de acordo com sua configuração do flex-direction.
+            O CROSS-AXIX é o eixo vertical, ou seja, ele vai cortar cada container filho ou container pai, de cima para baixo de acordo com seu flex-direction.
+            O MAIN-START indica o ponto incial do eixo, no caso do main ele se refere ao eixo horizontal e portanto o main-start é reponsável por indicar o inicio do lado esquerdo.
+            O MAIN-END é reponsável por indicar o finla do eixo horizontal, ou seja, o final ao lado direito.
+            O CROSS-START é reponsável por indicar o início do eixo vertical, ou seja, em cima.
+            O CROSS-END é reponsável por indicar o final do eixo vertical, ou seja, em baixo.
+            VALE LEMBRAR que o início e fim de cada eixo vai depender do seu flex-direction.*/
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+</body>
+</html>
