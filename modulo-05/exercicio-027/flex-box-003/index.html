@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flexbox</title>
+    <title>Flexbox- FLEX_WRAP</title>
     <style>
         div.container {
             
             display: flex;/*Ao usar o flexbox, é importante saber que ele é aplicado ao container pai e esse container ficar responsável em adaptar o seu conteúdo.
             Por padrão o display flex fica na direção row, ou seja, seu flex-direction é row oque quer dizer linha, na grande maioria dos idiomas, da esquerda para direita. Para mudar outra direção, devemos recorrer ao flex-direction: row-reverse; (linha ivertida da direita para esquerda) e o flex-direction: colum;(para deixar o container em coluna) e no caso de uma coluna invertida, ou seja, de baixo para cima se usa o colum-reverse*/
+            flex-flow: row wrap;/*É um Heandshot que uni o flex-direction e o o flex-wrap sendo a primeira configuração referente ao direction, ou seja, a direção e a segunda configuração referente ao encapsulamento, ou seja, a forma que o conteúdo se comporta, se vai quebrar ou não.*/
         }
         div.item {
             

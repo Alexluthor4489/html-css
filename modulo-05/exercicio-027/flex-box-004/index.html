@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JUSTIFY-CONTENT</title>
+    <style>
+        div.container {
+            display: flex;
+            background-color: lightblue;
+            height: 250px;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+            align-items: center;
+        }
+        div.item {
+            background-color: darkblue;
+            width: 200px;
+            border-radius: 15px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.662);
+            color: lightblue;
+            text-align: center;
+            align-content: center;
+            
+        }
+        /*O Justify-content é responsável por tudo que envolve o EIXO_MAIN ou MAIN-AXIS. Suas propriedades são responsáveis por posicionar o conteúdo do eixo main em diversas configurações diferentes.
+
+        PROPRIEDADES: 
+
+        Flex-start: Posiciona o conteúdo da esquerda para direita deixando o espaço restante no lado direito. (Depende do flex-direction).
+        Exemplo: |[][][]____|
+
+        Flex-end: Posiciona o conteúdo da direita para esqerda deixando o espaço restante do lado esquerdo. (Depende do flex-direction).
+        Exemplo: |____[][][]|
+
+        Center: Poiciona o conteúdo juntos no centro restando por igual os espaços nas laterais.
+        Espaço: |__[][][]__|
+
+        Space-between: Pega o primeiro item e  o útimo item e posiciona um no start(canto esquerdo) e o outro no end(canto direito) deixando os demais conteúdos centralizados com o mesmo espaço em relação uns aos outros e ao start e o end. 
+        Exemplo: |[]__[]__[]|
+        
+        Space-evenly: Todos o conteúdo vai ter o mesmo espaçamento entre eles inclusive antes do primeiro item e após o ultimo também Exemplo: |_[]_[]_[]_|
+        
+        Space-arround: Ele contabiliza quantos itens tem nesse container, divide esse epaço igualmente de acordo com a quantidade de itens, em seguida centraliza cada item dentro desse espaço calculado gerando um espaço restante para cada espaço de item.
+        Exemplo: |_[]__[]__[]_|. Perceba que as laterais extremas ficaram com um espaço menor. Isso acontece porque os espaços foram calculados igualmente, porém os espaços internos se somam fazendo parecerem serem maiores, ou seja, o meu espaço + o espaço do vizinho. Como nas laterais não tem vizinhos o espaço fica único, enquanto interiormente os espaços são duplos.
+        
+        O Align-items é responsável por tudo que envolve o EIXO_CROSS ou CROSS-AXIS. Suas propridades são responsáveis por posicionar o conteúdo do eixo cross em várias configurações diferentes.
+
+        PROPRIEDADES:
+
+        Stretch: Diferente do justify-content, o Align-items não tem como padrão a configuração start, ele tem por padrão a configuração stretch. Ela é responsável por esticar o conteúdo para se adapatar ao container no eixo cross.
+
+        Flex-start: Posiciona o conteúdo de cima para baixo, deixando o espaço restante na parte de baixo. (Depende do flex-direction).
+        Exemplo: |[][][]____|
+                 |          |
+        Flex-end: Posiciona o conteúdo de baixo para cima deixando o espaço restante do lado esquerdo. (Depende do flex-direction).
+        Exemplo: |          |
+                 |[][][]____|
+
+        Center: Poiciona o conteúdo junto no centro restando por igual os espaços em cima e em baixo.
+        */
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+    
+</body>
+</html>
