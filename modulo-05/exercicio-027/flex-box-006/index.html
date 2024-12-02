@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        div.container {
+            background-color: gainsboro;
+            display: flex;
+            flex-flow: row wrap;/*Aqui testamos várias propriedades do align-content e vale lembrar que para que ele funcione corretamente o flex-wrap deve ser wrap, ou seja, permite a quebra do conteúdo.*/
+            align-content: center;
+            height: 50vh;
+            /*IMPORTANTE SABER QUE, NÃO ADIANTA COLOCAR PROPRIEDADES COMO JUSTIFY-CONTENT, ALIGN-ITEMS E ALIGN-CONTENT DENTRO DE CONTAINERS FILHOS. ELES DEVEM TER SUAS CONFIGURAÇÕES ESTABELECIDAS NO CONTAINER PAI, A NÃO SER QUE ESSE CONTAINER FILHO SEJA FLEX TAMBÉM, OU SEJA, ELE TENHA UM DISPLAY:FLEX; TAMBÉM.*/
+        }
+        div.item {
+            background-color: rgb(60, 60, 225);
+            border: 1px solid white;
+            border-radius: 15px;
+            color: lightblue;
+            text-align: center;
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.735);
+            padding: 70px;
+            
+        }
+            
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+</body>
+</html>

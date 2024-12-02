@@ -12,7 +12,7 @@
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
         body {
-            background-image:linear-gradient(to right, rgb(15, 4, 69), rgb(80, 122, 237),rgb(166, 76, 251));
+            background-image:linear-gradient(to bottom, rgb(34, 238, 245), rgb(68, 125, 240),rgb(9, 28, 245));
             width: 100%;
            
         }
@@ -29,9 +29,16 @@
             height: 300px;
             background-image: linear-gradient(to right, rgb(70, 70, 72), rgb(35, 33, 33), rgb(17, 17, 20));
             border-radius: 15px;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.5s ease;
+        }
+        main section:hover{
+            transform: scale(1.1);
+            box-shadow: 2px 2px 15px rgba(255, 255, 255, 0.717);
         }
         main > section > h1 {
-            color: rgba(220, 224, 233, 0.642);
+            color: rgba(245, 246, 248, 0.642);
             text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.427);
             text-align: center;
             height: 100%;
@@ -39,6 +46,30 @@
             font-weight: 500;
             font-size: 2em;
         }
+        /*ALIGN-CONTENT:
+
+        Stretch: Por padrão o align-content vem configurado como stretch, ou seja, o conteúdo se estica para se adaptar ao seu container de acordo com a quantidade de linhas que foi quebrado. Por exemplo: Se o conteúdo tiver sido quebrado em 2 linhas, o stretch vai ser dividido em 2 partes se for em 3 lionhas vai ser dividido igulamenete em 3 partes e assim por diante.
+        
+        flex-Start: Ele pega todos os elementos e vai grudar no croos-start ou seja, no topo logo no iníco
+        |[][]|
+        |[]  |
+        |    |
+        |    |
+        flex-end: Ele pega todos os elementos e vai grudar no croos-end ou seja, na base lá no final do espaço disponível.
+        |    |
+        |    |
+        |[][]|
+        |[]  |
+        Center: Basicamente ele centraliza verticalmenete. Seu mecanismo funciona da seguinte forma: ele cria espaços igualmente divididos nas partes superior e inferior do conteúdo, empurrando assim ele para o centro.
+        |    |
+        |[][]|
+        |[]  |
+        |    |
+        
+        O Align-Content também possui as 3 principais propriedades de posicionamento que o justify-content: SPACE-BETWEEN, EVENLY E ARROUND. Ambos funcionam da mesma forma, porém agora eles posicionam o eixo vertical.
+        
+        OBESERVE QUE EM TODOS OS POSICIONAMENTOS, ELE SE REFERE AO EIXO CROOS-AXIS(VERTICAL)
+        */
 
     </style>
 </head>
