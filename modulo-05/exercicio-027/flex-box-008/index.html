@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        div.container {
+            background-color: gainsboro;
+            display: flex;
+            flex-flow: row wrap;/*Aqui testamos várias propriedades do align-content e vale lembrar que para que ele funcione corretamente o flex-wrap deve ser wrap, ou seja, permite a quebra do conteúdo.*/
+            align-items: center;
+            height: 50vh;
+            /*IMPORTANTE SABER QUE, NÃO ADIANTA COLOCAR PROPRIEDADES COMO JUSTIFY-CONTENT, ALIGN-ITEMS E ALIGN-CONTENT DENTRO DE CONTAINERS FILHOS. ELES DEVEM TER SUAS CONFIGURAÇÕES ESTABELECIDAS NO CONTAINER PAI, A NÃO SER QUE ESSE CONTAINER FILHO SEJA FLEX TAMBÉM, OU SEJA, ELE TENHA UM DISPLAY:FLEX; TAMBÉM.*/
+        }
+        div.item {
+            background-color: rgb(60, 60, 225);
+            border: 1px solid white;
+            border-radius: 15px;
+            color: lightblue;
+            text-align: center;
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.735);
+            padding: 70px;   
+        }
+
+        /*APRENDENDO SOBRE ALIGN-SELF
+        (Não serve para Pais)
+        Ele se aplica no itens, ou seja, nos containers filhos e vai posicionar diretamente o cross-axis. O align-self possui 5 valores. Veja abaixo:
+
+        Auto: Esse valor herda o alinhamento vertical do container Pai, esse alinhamento pode ser o align items ou content. Neste caso em específico o alinhamento do pai é o alim-content center. OBS: Por algum motivo o align-self: auto; só herdou a configuração do container Pai quando no container estava configurado com o align-items, mas não herdou quando estava no align-content.
+        |      |
+        |[]    |
+        |      |
+        Flex-start: Esse valor se refere ao alinhamento perto do cross-start, no início.
+        |[]    |
+        |      |
+        |      |
+        flex-end: Esse valor se refere ao alinhamento perto do cross-end, no final.
+        |      |
+        |      |
+        |[]    |
+        Center: Esse valor determina o centro entre o cross-start e o cross-end.
+        |      |
+        |[]    |
+        |      |
+        Stretch: Esse valor se adaptar ao tamanho disponivel do container pai se esticando verticalmente.
+        |[]    |
+        |[]    |
+        |[]    | */
+
+        div#i1{
+            align-self: auto;
+        }
+        div#i2{
+            align-self: flex-end;
+        }
+        div#i3{
+            align-self: flex-start ;
+        }
+        div#i4{
+            align-self:center ;
+        }
+        div#i5{
+            align-self:stretch ;
+        }
+        div#i6{
+            align-self: flex-start;
+        }
+        div#i7{
+            align-self: flex-end;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item" id="i1">A</div>
+        <div class="item" id="i2">B</div>
+        <div class="item" id="i3">C</div>
+        <div class="item" id="i4">D</div>
+        <div class="item" id="i5">E</div>
+        <div class="item" id="i6">F</div>
+        <div class="item" id="i7">G</div>
+    </div>
+</body>
+</html>
