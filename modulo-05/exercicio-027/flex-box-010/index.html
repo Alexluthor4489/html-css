@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        div.container {
+            background-color: gainsboro;
+            display: flex;
+            flex-flow: row nowrap;
+        
+            
+        }
+        div.item {
+            background-color: rgb(60, 60, 225);
+            border: 1px solid white;
+            border-radius: 15px;
+            color: lightblue;
+            text-align: center;
+            align-content: center;
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.735);
+            height: 100px;
+           
+            
+        }
+        .item{
+            font-size: 1.5em;
+        }
+
+        /*APRENDENDO SOBRE FLEX-BASIS
+        
+        Auto:
+
+        Essa propriedade, por padrão sempre vem com o valor auto e flex-shrink: 1, ou seja, verdadeiro, portanto aqui ele está dizendo: "pode encolher". Isso significa que o tamanho do conteúdo do item em seu eixo principal, ou seja, no eixo que foi definido no container row ou colum, irá variar dependendo do conteúdo contido em cada item. Por exemplo, se o eixo definido for o row, então a largura desses irens vão se adaptar dentro de seu espaço disponível.
+        | [a] [aaa] [a] |.
+        
+        Valor definido: Flex-basis:200px;
+        
+        Quando definimos um tamanho para o flex-basis então ele deixa de se adaptar e com isso todos os itens do container vão ter a mesma largura idependente do seu conteúdo. Vale lembrar que o é possível mudar o tamanho de um desses elementos ou itens individalmente através de um id. 
+        É importante saber que essa medida estabelecida de 200px não é definitiva, pois na medida que a tela diminuir ele vai diminuindo para caber em seu container, ou seja, sua medida inicial deixa de ser 200px para ser uma medida determinada pelo navegador, até que chegue em um ponto que não se pode diminuir mais. No entannto esse exemplo é baseado em uma configuração de nowrap, ou seja, ele não vai quebrar o conteúdo e porisso vai se adaptando até nõ poder mais. Caso a configuração seja wrap, ele vai poder quebrar o conteúdo e portanto manter com mais facilidade os 200px, a não ser que tenha sido estabelecido uma largura exorbitante, nesse caso ele não fará milagres.
+        |[ a ][aaa][ a ] |
+        
+        FLEX-SHRINK
+        
+        Flex-shrink: 1 Pode encolher?
+        Por padrão o navegador está com  a configuração flex-shtrink, ou seja, pode encolher. Como sabemos tudo que é diferente de Zero é verdadeiro então o 1 está ativando ele.
+
+        FLEX-GROW
+
+        Flex-grow: 0 Pode aumentar?
+        O flex-grow, estando com o valor zero quer dizer false, ou seja, não pode crescer, portanto se se os itens do container tiverem um valor estabelecido como por exemplo, 200px enquanto ele precisar encolher ele vai diminuir pois o flex-shrink está ativo, mas quando aumentamos a tela ao ponto em que temos o dobro do tamanho por exemplo, ele vai aumentar apenas até seu tamanho estabelecido que é 200px. Para mudar isso será necessário mudar também  flex-grow.
+        
+        FLEX
+        
+        Como vimos no exemplo anterior, o flex-basis trabalha em conjunto com outras duas configurações; o flex-shrink e o flex-grow. Então podemos deduzir que é possível que exista um heandshot para o uso de ambos em uma só linha e esse hanshot existe e se chama flex:
+        
+        Flex: É o handshot das propriedades acima e sua estrutura é a seguinte: flex: grow shrink basis; nesta exata ordem.
+        
+        Como vimos o navegador vem com algumas configurações padrões no requesito flex.Exemplo: flex-grow: por padrão '0'; flex-shrink: por padrão '1'; E flex-basis: por padrão 'auto'; Portanto temos  a seguinte configuração padrão:FLEX:0 1 AUTO; ou simplismente podemos usar o FLEX:INITIAL; , pois é a mesma coisa.
+        
+        EMTENDENDO ALGUMAS CONFIGURAÇÕES DO FLEX
+        
+        flex: 0 1 auto; ou flex:initial;
+        O Elemento não poderá crescer, poderá diminuir e seu tamanho vai ser definido ou pelo width e hidht ou em caso de não termos um tamanho determinado ele vai se adaptar ao tamanho do conteúdo desse elemento, ou seja,se tiver uma letra lá dentro ele vai se adaptar ao tamano da letra.
+        
+        flex: 0 0 auto; OU flex: none; (NADA FLEXÍVEL)
+        O Elemento não pode crescer , não pode diminuir, e seu tamanho vai ser definido ou pelo width e hidht ou em caso de não termos um tamanho determinado ele vai se adaptar ao tamanho do conteúdo desse elemento, ou seja,se tiver uma letra lá dentro ele vai se adaptar ao tamano da letra.
+        
+        flex: 1 1 auto; OU flex: auto; (TOTALMENTE FLEXÍVEL)
+        O Elemento pode crescer, pode diminuir, e seu tamanho vai ser definido ou pelo width e hidht ou em caso de não termos um tamanho determinado ele vai se adaptar ao tamanho do conteúdo desse elemento, ou seja,se tiver uma letra lá dentro ele vai se adaptar ao tamano da letra.
+
+        flex: 1 0 auto;
+        O Elemento pode crescer, não pode diminuir e seu tamanho vai ser definido ou pelo width e hidht ou em caso de não termos um tamanho determinado ele vai se adaptar ao tamanho do conteúdo desse elemento, ou seja,se tiver uma letra lá dentro ele vai se adaptar ao tamano da letra. 
+        
+        flex: 3; 
+        Quando tivermos apenas um valor seja ele qual for, dentro do flex, então este valor vai ser referente ao flex-grow. O restante vai ser compreendido pelo navegador como padrão, ou seja, flex: 3 1 auto; */ 
+
+        div#i1{
+            flex: 2 0 300px;
+        }
+        div#i2{
+            flex: 3 1 300px;
+        }
+        div#i3{
+            flex: 0 1 300px;
+        }
+
+        /*VALORES PA
+        */
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item" id="i1">A</div>
+        <div class="item" id="i2">B</div>
+        <div class="item" id="i3">C</div>
+        
+    </div>
+    
+</body>
+</html>
