@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu com flexbox</title>
+    <style>
+    *{
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+    html, body{
+        width: 100vw;
+        height: 100vh;
+        background-color: lightgray;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    div.container{
+        display: flex;
+        flex-flow: column wrap;
+        background-color: rgb(30, 35, 108);
+        height: 150px;
+        
+    }
+    div.container > h1{
+        font-size: 2.5em;
+        color: white;
+        margin: 10px;
+        font-weight: 500;
+    }
+    menu {
+        flex: auto;
+        align-content: center;
+    }
+    menu > a{
+        padding: 10px;
+        background-color: blue;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-left: 10px;
+        
+    }
+
+    menu > a:hover{
+        background-color: deepskyblue;
+        color: darkblue;
+    }
+    main{
+        flex: auto;
+        background-color: white;
+        margin: 10px;
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.397);
+    }
+    main > p {
+        font-size: 1.2em;
+        text-align: justify;
+    }
+    main > h2 {
+        font-size: 2em;
+        font-weight: 500;
+    }
+    h1, h2 {
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.511);
+    }
+
+        </style>
+    </head>
+<body>
+    <div class="container">
+        <h1>Meu Site</h1>
+            <menu>
+                <a href="#">Opção 1</a>
+                <a href="#">Opção 2</a>
+                <a href="#">Opção 3</a>
+                <a href="#">Opção 4</a>
+                <a href="#">Opção 5</a>
+                <a href="#">Opção 6</a>
+            </menu>
+    </div>
+    <main>
+        <h2>Testes de Flexbox</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam unde molestias provident sunt. Sapiente eligendi sit, veritatis facilis labore doloribus laboriosam fuga. Fugit facilis aliquam consectetur harum repudiandae, perferendis rem? <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius assumenda ipsum aliquid enim autem error minus eveniet. Maxime alias et quibusdam! Assumenda, nisi debitis? Nesciunt, voluptas. Nam quas provident quae. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi sed quas pariatur maxime repellat quisquam a laudantium ad nihil obcaecati! Quo nisi at tempore, fugit eveniet distinctio quae ea pariatur!</p>
+    </main>
+    
+</body>
+</html>
